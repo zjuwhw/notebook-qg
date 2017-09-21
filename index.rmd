@@ -1,0 +1,3 @@
+# Preface
+
+This is a notebook for reading the book "[Introduction to Quantitative Genetics (4th Edition)](https://www.amazon.com/Introduction-Quantitative-Genetics-Douglas-Falconer/dp/0582243025).
