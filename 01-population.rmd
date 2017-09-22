@@ -183,8 +183,67 @@ ggplot(data.melt, aes(x=gene, y=value,colour=variable), group = variable) + geom
 
 ### More than one locus
 
+Disequilibrium with respect to two or more loci is called **gametic phase disequilibrium**, or **linkage disequilibrium**, irrespective of whether the loci are linked or not.
 
+Disequilibrium can arise from intermixture of populations with different gene frequencies, or from chance in small populations. Disequilibrium can also be produced, and maintained, by selection favouring one combination of alleles over another.
+
+Table 1.5
+
+|Genes(alleles) | $A_1$|$A_2$|$B_1$|$B_2$|
+|:--|:--:|:--:|:--:|:--:|
+|Gene/allele frequencies|$p_A$|$q_A$|$P_B$|$q_B$|
+|Gametic types|$A_1B_1$|$A_1B_2$|$A_2B_1$|$A_2B_2$|
+|Frequencies, equilibrium|$p_Ap_B$|$p_Aq_B$|$q_Ap_B$|$q_Aq_B$|
+|Frequencies, actual|r|s|t|u|
+|Difference from equilibrium|+D|-D|-D|+D|
+
+Another way of Table 1.5
+
+||$A_1(p_A)$|$A_2(q_A)$|Total|
+|:--:|:--:|:--:|:--:|
+|$B_1(p_B)$|$A_1B_1(r=p_Ap_B+D)$|$A_2B_1(t=q_Ap_B-D)$|$r+t=p_B$|
+|$B_2(q_B)$|$A_1B_2(s=p_Aq_B-D)$|$A_2B_2(u=q_Aq_B+D)$|$s+u=q_B$|
+|Total|$r+s=p_A$|$t+u=q_A$|1|
+
+$$D = ru-st$$
+
+Note: The statistic analysis "$\chi^2_{[1]}=0.93; P>0.5$" seems to me is wrong. Because `1-pchisq(0.93,1)=0.3348629`, it's also not significance, but less than 0.5.
+
+The maximum of the absolute value of D is 0.25 when $p_A = q_A = p_B = q_B = 0.5$.
+
+$D_{max}$ is the largest numerical value D coud be, given the observed gene fequncies.
+
+If two loci are linked on the same chromosome, the gamete type $A_1B_1$ in the progeny generation can be obtainded from $A_1B_1/A_xB_x$ without recombination or $A_1B_x/A_xB_1$ with recombination. The frequency of the former situation is r(1-c), r being the frequency of $A_1B_1$ in the parental gamets and c the recombination frequncy. The frequency of later situation is $p_Ap_Bc$. therefore the frequency of $A_1B_1$ in the progeny gamets is
+
+$$r' = r(1-c) + p_Ap_Bc$$
+
+and the disequilibrium in the progeny generation is
+
+$$D' = r' - p_Ap_B = D(1-c)$$
+
+In a more general way, after any number t of generations, the disequilibrium is given by
+
+$$D_t = D_0 (1-c)^t$$
+
+```{r}
+plot(c(0,12),c(0,1),col="white",main="Approach to equilibrium under random mating of two loci, considered jointly.",xlab="Generation", ylab="D")
+t = 0:12;d0 = 1
+lines(t,d0*(1-0.05)^t, col=1);text(10,0.7,"0.05")
+lines(t,d0*(1-0.1)^t, col=2);text(9,0.47,"0.1")
+lines(t,d0*(1-0.2)^t, col=3);text(7,0.3,"0.2")
+lines(t,d0*(1-0.3)^t, col=4);text(6,0.2,"0.3")
+lines(t,d0*(1-0.5)^t, col=5);text(4.5,0.1,"0.5")
+```
 
 ## Non-random mating
 
+There are two distinct forms of non-random mating.
+
+- The first is when mated individuals are related to each other by ancestral descent. This tends to increase the frequencies of homozygotes at all loci.
+- The second is when individuals tend to mate preferentially with respect to their genotypes at any particular locus under consideration.
+
+If mated pairs are of the same phenotype more often than would occur by chance, this is called **assortative mating**, and if less often, it is called **disassortative mating**.
+
 ### Assortative mating
+
+The effect of assortative mating on genotype frequencies among progeny is to increase the frequencies of homzygotes and reduce that of heterozygotes.

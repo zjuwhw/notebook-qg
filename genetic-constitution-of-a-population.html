@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html">
-
+<link rel="next" href="changes-of-gene-frequency.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -117,6 +117,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="genetic-constitution-of-a-population.html"><a href="genetic-constitution-of-a-population.html#non-random-mating"><i class="fa fa-check"></i><b>2.3</b> Non-random mating</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="genetic-constitution-of-a-population.html"><a href="genetic-constitution-of-a-population.html#assortative-mating"><i class="fa fa-check"></i><b>2.3.1</b> Assortative mating</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html"><i class="fa fa-check"></i><b>3</b> Changes of Gene Frequency</a><ul>
+<li class="chapter" data-level="3.1" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#migration"><i class="fa fa-check"></i><b>3.1</b> Migration</a></li>
+<li class="chapter" data-level="3.2" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#mutation"><i class="fa fa-check"></i><b>3.2</b> Mutation</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#non-recurrent-mutation"><i class="fa fa-check"></i><b>3.2.1</b> Non-recurrent mutation</a></li>
+<li class="chapter" data-level="3.2.2" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#recurrent-mutation"><i class="fa fa-check"></i><b>3.2.2</b> Recurrent mutation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#selection"><i class="fa fa-check"></i><b>3.3</b> Selection</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#change-of-gene-frequency-under-selection"><i class="fa fa-check"></i><b>3.3.1</b> Change of gene frequency under selection</a></li>
+<li class="chapter" data-level="3.3.2" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#effectiveness-of-selection"><i class="fa fa-check"></i><b>3.3.2</b> Effectiveness of selection</a></li>
+<li class="chapter" data-level="3.3.3" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#number-of-generations-required"><i class="fa fa-check"></i><b>3.3.3</b> Number of generations required</a></li>
+<li class="chapter" data-level="3.3.4" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#average-fitness-and-load"><i class="fa fa-check"></i><b>3.3.4</b> Average fitness and load</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#equilibria"><i class="fa fa-check"></i><b>3.4</b> Equilibria</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#balance-between-mutation-and-selection"><i class="fa fa-check"></i><b>3.4.1</b> Balance between mutation and selection</a></li>
+<li class="chapter" data-level="3.4.2" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#changes-of-equilibrium"><i class="fa fa-check"></i><b>3.4.2</b> Changes of equilibrium</a></li>
+<li class="chapter" data-level="3.4.3" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#selection-favouring-heterozygotes"><i class="fa fa-check"></i><b>3.4.3</b> Selection favouring heterozygotes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="changes-of-gene-frequency.html"><a href="changes-of-gene-frequency.html#polymorphism"><i class="fa fa-check"></i><b>3.5</b> Polymorphism</a></li>
 </ul></li>
 <li class="divider"></li>
 Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a> by <a href="http://zjuwhw.github.io/" target="blank">zjuwhw</a>
@@ -534,12 +553,119 @@ data.melt =<span class="st"> </span><span class="kw">melt</span>(data, <span cla
 </div>
 <div id="more-than-one-locus" class="section level3">
 <h3><span class="header-section-number">2.2.6</span> More than one locus</h3>
+<p>Disequilibrium with respect to two or more loci is called <strong>gametic phase disequilibrium</strong>, or <strong>linkage disequilibrium</strong>, irrespective of whether the loci are linked or not.</p>
+<p>Disequilibrium can arise from intermixture of populations with different gene frequencies, or from chance in small populations. Disequilibrium can also be produced, and maintained, by selection favouring one combination of alleles over another.</p>
+<p>Table 1.5</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Genes(alleles)</th>
+<th align="center"><span class="math inline">\(A_1\)</span></th>
+<th align="center"><span class="math inline">\(A_2\)</span></th>
+<th align="center"><span class="math inline">\(B_1\)</span></th>
+<th align="center"><span class="math inline">\(B_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Gene/allele frequencies</td>
+<td align="center"><span class="math inline">\(p_A\)</span></td>
+<td align="center"><span class="math inline">\(q_A\)</span></td>
+<td align="center"><span class="math inline">\(P_B\)</span></td>
+<td align="center"><span class="math inline">\(q_B\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Gametic types</td>
+<td align="center"><span class="math inline">\(A_1B_1\)</span></td>
+<td align="center"><span class="math inline">\(A_1B_2\)</span></td>
+<td align="center"><span class="math inline">\(A_2B_1\)</span></td>
+<td align="center"><span class="math inline">\(A_2B_2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Frequencies, equilibrium</td>
+<td align="center"><span class="math inline">\(p_Ap_B\)</span></td>
+<td align="center"><span class="math inline">\(p_Aq_B\)</span></td>
+<td align="center"><span class="math inline">\(q_Ap_B\)</span></td>
+<td align="center"><span class="math inline">\(q_Aq_B\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Frequencies, actual</td>
+<td align="center">r</td>
+<td align="center">s</td>
+<td align="center">t</td>
+<td align="center">u</td>
+</tr>
+<tr class="odd">
+<td align="left">Difference from equilibrium</td>
+<td align="center">+D</td>
+<td align="center">-D</td>
+<td align="center">-D</td>
+<td align="center">+D</td>
+</tr>
+</tbody>
+</table>
+<p>Another way of Table 1.5</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><span class="math inline">\(A_1(p_A)\)</span></th>
+<th align="center"><span class="math inline">\(A_2(q_A)\)</span></th>
+<th align="center">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(B_1(p_B)\)</span></td>
+<td align="center"><span class="math inline">\(A_1B_1(r=p_Ap_B+D)\)</span></td>
+<td align="center"><span class="math inline">\(A_2B_1(t=q_Ap_B-D)\)</span></td>
+<td align="center"><span class="math inline">\(r+t=p_B\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(B_2(q_B)\)</span></td>
+<td align="center"><span class="math inline">\(A_1B_2(s=p_Aq_B-D)\)</span></td>
+<td align="center"><span class="math inline">\(A_2B_2(u=q_Aq_B+D)\)</span></td>
+<td align="center"><span class="math inline">\(s+u=q_B\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Total</td>
+<td align="center"><span class="math inline">\(r+s=p_A\)</span></td>
+<td align="center"><span class="math inline">\(t+u=q_A\)</span></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[D = ru-st\]</span></p>
+<p>Note: The statistic analysis “<span class="math inline">\(\chi^2_{[1]}=0.93; P&gt;0.5\)</span>” seems to me is wrong. Because <code>1-pchisq(0.93,1)=0.3348629</code>, it’s also not significance, but less than 0.5.</p>
+<p>The maximum of the absolute value of D is 0.25 when <span class="math inline">\(p_A = q_A = p_B = q_B = 0.5\)</span>.</p>
+<p><span class="math inline">\(D_{max}\)</span> is the largest numerical value D coud be, given the observed gene fequncies.</p>
+<p>If two loci are linked on the same chromosome, the gamete type <span class="math inline">\(A_1B_1\)</span> in the progeny generation can be obtainded from <span class="math inline">\(A_1B_1/A_xB_x\)</span> without recombination or <span class="math inline">\(A_1B_x/A_xB_1\)</span> with recombination. The frequency of the former situation is r(1-c), r being the frequency of <span class="math inline">\(A_1B_1\)</span> in the parental gamets and c the recombination frequncy. The frequency of later situation is <span class="math inline">\(p_Ap_Bc\)</span>. therefore the frequency of <span class="math inline">\(A_1B_1\)</span> in the progeny gamets is</p>
+<p><span class="math display">\[r&#39; = r(1-c) + p_Ap_Bc\]</span></p>
+<p>and the disequilibrium in the progeny generation is</p>
+<p><span class="math display">\[D&#39; = r&#39; - p_Ap_B = D(1-c)\]</span></p>
+<p>In a more general way, after any number t of generations, the disequilibrium is given by</p>
+<p><span class="math display">\[D_t = D_0 (1-c)^t\]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">12</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">col=</span><span class="st">&quot;white&quot;</span>,<span class="dt">main=</span><span class="st">&quot;Approach to equilibrium under random mating of two loci, considered jointly.&quot;</span>,<span class="dt">xlab=</span><span class="st">&quot;Generation&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;D&quot;</span>)
+t =<span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">12</span>;d0 =<span class="st"> </span><span class="dv">1</span>
+<span class="kw">lines</span>(t,d0<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">0.05</span>)<span class="op">^</span>t, <span class="dt">col=</span><span class="dv">1</span>);<span class="kw">text</span>(<span class="dv">10</span>,<span class="fl">0.7</span>,<span class="st">&quot;0.05&quot;</span>)
+<span class="kw">lines</span>(t,d0<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">0.1</span>)<span class="op">^</span>t, <span class="dt">col=</span><span class="dv">2</span>);<span class="kw">text</span>(<span class="dv">9</span>,<span class="fl">0.47</span>,<span class="st">&quot;0.1&quot;</span>)
+<span class="kw">lines</span>(t,d0<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">0.2</span>)<span class="op">^</span>t, <span class="dt">col=</span><span class="dv">3</span>);<span class="kw">text</span>(<span class="dv">7</span>,<span class="fl">0.3</span>,<span class="st">&quot;0.2&quot;</span>)
+<span class="kw">lines</span>(t,d0<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">0.3</span>)<span class="op">^</span>t, <span class="dt">col=</span><span class="dv">4</span>);<span class="kw">text</span>(<span class="dv">6</span>,<span class="fl">0.2</span>,<span class="st">&quot;0.3&quot;</span>)
+<span class="kw">lines</span>(t,d0<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">0.5</span>)<span class="op">^</span>t, <span class="dt">col=</span><span class="dv">5</span>);<span class="kw">text</span>(<span class="fl">4.5</span>,<span class="fl">0.1</span>,<span class="st">&quot;0.5&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 </div>
 <div id="non-random-mating" class="section level2">
 <h2><span class="header-section-number">2.3</span> Non-random mating</h2>
+<p>There are two distinct forms of non-random mating.</p>
+<ul>
+<li>The first is when mated individuals are related to each other by ancestral descent. This tends to increase the frequencies of homozygotes at all loci.</li>
+<li>The second is when individuals tend to mate preferentially with respect to their genotypes at any particular locus under consideration.</li>
+</ul>
+<p>If mated pairs are of the same phenotype more often than would occur by chance, this is called <strong>assortative mating</strong>, and if less often, it is called <strong>disassortative mating</strong>.</p>
 <div id="assortative-mating" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Assortative mating</h3>
+<p>The effect of assortative mating on genotype frequencies among progeny is to increase the frequencies of homzygotes and reduce that of heterozygotes.</p>
 
 </div>
 </div>
@@ -549,8 +675,8 @@ data.melt =<span class="st"> </span><span class="kw">melt</span>(data, <span cla
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="changes-of-gene-frequency.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

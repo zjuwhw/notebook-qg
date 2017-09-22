@@ -1,0 +1,47 @@
+# Changes of Gene Frequency
+
+There are two sorts of process through which changes of gene frequency, and consequently of genotype frequencies, are brought about:
+
+- systematic processes, which tend to change the gene frequency in a manner predictable both in amount and in direction
+  - migration
+  - mutation
+  - selection
+- dispersive process, which arises in small populations from the effects of sampling, and is predictable in amount but not in direction.
+
+## Migration
+
+A large population consists of a proportion m of new immigrants in each generation, let the frequency of a certain gene(allele) be $q_m$ ammong the immigrants and $q_0$ among the natives. The frequency of the gene in the mixed population $q_1$, will be:
+
+$$q_1 = mq_m + (1-m)q_0 = m(q_m-q_0)+q_0$$
+
+the change of gene frequency, $\Delta q$,
+
+$$\Delta q = q_1 - q_0 = m(q_m - q_0)$$
+
+It shows the rate of change of gene frequency in a population subject ot immigration depends, as much be obvious, on the immigration rate and on the difference of gene frequency between immigrants and natives.
+
+## Mutation
+
+### Non-recurrent mutation
+
+### Recurrent mutation
+
+## Selection
+
+### Change of gene frequency under selection
+
+### Effectiveness of selection
+
+### Number of generations required
+
+### Average fitness and load
+
+## Equilibria
+
+### Balance between mutation and selection
+
+### Changes of equilibrium
+
+### Selection favouring heterozygotes
+
+## Polymorphism
