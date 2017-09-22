@@ -72,7 +72,7 @@ Table 1.1 Steps of deduction in the proof of HWL, and the conditions that mst ho
 |3|genotype|progeny|(7)Equal viability|
 |4|gene(allele)|progeny||
 
-```{r, echo=FALSE}
+```{r}
 p = seq(0,1,0.01)
 plot(p, (1-p)^2, ylab = "genotype frequency", xlab="Gene Freuqncy of A2", main="Under HWE",type="l", col="blue")
 lines(p, 2*p*(1-p), col="green")
@@ -142,8 +142,48 @@ Consider two alleles, A1 and A2, with frequencies p and q, and the genotypic fre
 For females, the A1 frequncy $p_f = P + \frac{1}{2}H$; for males, the $p_m = R$, so the frequency of $A_1$ in the whole population is,
 
 $$\bar{p} = \frac{2}{3}p_f + \frac{1}{3}p_m = \frac{1}{3}(2P + H + R)$$
+Males get their sex-linked genes only from their mothers, and females get their sex-linked genes equally from both parents. So
+
+$$p_m^{'} =p_f\text{ and }p_f^{'}=\frac{1}{2}(p_m + p_f)$$
+
+where, $p_m^{'}$ and $p_f^{'}$ are the gene frequnce in the progeny generation.
+
+The differnce between the frequencies in the two sexes is
+
+$$p_f^{'}-p_m^{'} = \frac{1}{2}(p_m + p_f) -p_f = -\frac{1}{2}(p_f - p_m)$$
+
+Therefore the distribution of the genes between the two sexes oscillates, but the difference is halved in successive generations and the population rapidly approaches an equilibrium in which the frequencies in the two sexs are equal.
+
+```{r}
+GetGeneFreq_whole = function(pf, pm){
+  ### We assume the number of males and females are equal in the population
+  return(2/3*pf + 1/3*pm)
+}
+GetGeneFreq_sex_next = function(pf,pm){
+  pm_next = pf
+  pf_next = 1/2*(pm+pf)
+  return(c(pf_next, pm_next))
+}
+data = c()
+pf = 1; pm = 0; gene=0
+data = rbind(data, data.frame(gene=gene, female=pf, male=pm, whole=GetGeneFreq_whole(pf,pm)))
+for(gene in 1:10){
+  pfm = GetGeneFreq_sex_next(pf,pm)
+  pf = pfm[1]; pm=pfm[2]
+  data = rbind(data, data.frame(gene=gene, female=pf, male=pm, whole=GetGeneFreq_whole(pf,pm)))
+}
+library(ggplot2)
+library(reshape2)
+data.melt = melt(data, id.vars = "gene")
+ggplot(data.melt, aes(x=gene, y=value,colour=variable), group = variable) + geom_line() +
+  ggtitle("Approach to equilibrium under random mating for a sex-linked gene") + 
+  xlab("Generation") +
+  ylab("Gene(allele) Frequency")
+```
 
 ### More than one locus
+
+
 
 ## Non-random mating
 
