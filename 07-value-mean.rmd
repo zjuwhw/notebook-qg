@@ -1,0 +1,27 @@
+# Values and Means
+
+The concept of **value** is expressible in the metric units by which the character is measured. The value observed when the character is measured on an individual is the **phenotypic value** of that individual. All observations, whether of means, variances, or covariances, must clearly be based on measurements of phenotypic values.
+
+The first division of phenotypic value is into components attributable to the influence of genotype and environment. The **genotype** is the particular assemblage of genes possessed by the individual, and the **environment** is all the non-genetic circumstances that influence the phenotypic value.
+
+$$P = G + E$$
+
+where P is the phenotypic value, G is the genotypic value, and E is the environmental deviation.
+
+The mean environmental deviation in the population as a whole is taken to be zero, so that the mean phenotypic value is equal to the mean genotypic value. The term **population mean** then refers equally to phenotypic or to genotypic values.
+
+For the purposes of deduction we must assign arbitrary values to the genotypes under discussion. Considering a single locus with two alleles, $A_1$ and $A_2$, we cal the genotypic value of one homozygote +a, that of the other homozygote -a and that of the heterozygote d. (we shall adopt the convention that $A_1$ is the allele that increases the value).
+
+![](_main_files/figure-html/genotypic_value.png)
+
+Fig. 7.1. Arbitrarily assigned genotypic values
+
+## Population mean
+
+## Average effect
+
+## Breeding value
+
+## Dominance deviation
+
+## Interaction deviation

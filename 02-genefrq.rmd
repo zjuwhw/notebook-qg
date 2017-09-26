@@ -24,11 +24,56 @@ It shows the rate of change of gene frequency in a population subject ot immigra
 
 ### Non-recurrent mutation
 
+Consider first a mutational event that gives rise to just one representative of the mutated gene or chromosome in the whole population. This sort of mutation is of very little importance as a cause of change of gene frequency, because the product of a unique mutation has only a very small chance of surviving in a large population.
+
 ### Recurrent mutation
+
+Suppose gene A1 has a frequency u per generation to A2 and gene A2 has a frequncy v to v1. Then the change of gene frequncy in one generation:
+
+$$\Delta q = up_0 - vq_0$$
+
+where $p_0$ and $p_1$ are the initial frequncies of A1 and A2 alleles.
+
+The point of equilibrium is when $\Delta q = 0$
+
+About the effect of mutation on gene frequncy:
+
+- Mutation rates are generally very low ($10^-5$ or $10^-6$ for most organisms), mutation alone can produce very slow changes of gene frequncy. on an evolutionary time-scale they might be important.
+- Some research shows that reverse mutation (from mutant to wild type) is usually much less frequent than forward mutation.
 
 ## Selection
 
+The contribution of offspring to the next generation is call **fitness** of the individual, or sometimes the **adaptive value**, or **selective value**. If the differences of fitness are in any way associated with the presence or absence of a particular gene in the individual's genotype, then **selection** operates on that gene.
+
+selective elimination may operate either through reduced viability (生存能力) or through reduced fertility (繁殖能力), in the widest sense, including mating ability, or through both.
+
+The strength of the selection is expressed as the **coefficient of selection**, **s**, which is the proportionate reduction in the gametic contribution of a particular genotype compared with a standard genotype, usually the most favoured.
+
+The contribution of the favoured genotype is taken to be 1, and the contribution of the genotype selected against is then 1-s. This expresses the **fitnees** of one genotype realtive to the other. Fitness, defined in this way as the proportionate contribution of offspring, should strictly speaking be called **relative fitness**.
+
+The fitness of a genotype depends on the environmental circumstances in which the individual lives, and also on the genotype with respect to genes at other loci.
+
+Table Degrees of dominance with respect to fitness (adapted from Fig. 2.1)
+
+|degrees of domiance|$A_1A_1$|$A_1A_2$|$A_2A_2$|
+|:--|:--:|:--:|:--:|
+|No dominance|1|$1-\frac{1}{2}s$|1-s|
+|Partial dominance|1|1-hs|1-s|
+|Complete dominance|1|1|1-s|
+|Overdominance|1-$s_1$|1|1-$s_2$|
+
 ### Change of gene frequency under selection
+
+Consider the case of complete dominance with selection acting against the recessive homozygote.
+
+Table 2.1 Selection against a recessive gene.
+
+||$A_1A_1$|$A_1A_2$|$A_2A_2$|Total|
+|:--|:--:|:--:|:--:|:--:|
+|Initial frequencies|$p^2$|2pq|$q^2$|1|
+|Coefficient of selection|0|0|s||
+|Fitness|1|1|1-s||
+|Gametic contribution|$p^2$|2pq|$q^2(1-s)$|$1-sq^2$|
 
 ### Effectiveness of selection
 

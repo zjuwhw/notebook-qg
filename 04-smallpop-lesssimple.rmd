@@ -1,0 +1,29 @@
+# Small Populations: II. Less Simplified Conditions
+
+## Effective population size
+
+### exclusion of closely related matings
+
+### Different numbers of males and females
+
+### Unequal numbers in successive generations
+
+### Non-random distribution of family size
+
+### Minimal inbreeding
+
+### Overlapping generations
+
+## Mutation, migration, and selection
+
+### Non-recurrent neutral mutation
+
+### Recureent mutation and migration
+
+### Selection
+
+## Random drift in natural populations
+
+## Polymorphism
+
+### Neutral theory

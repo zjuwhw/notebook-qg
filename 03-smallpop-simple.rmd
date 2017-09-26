@@ -1,0 +1,19 @@
+# Small populations: I. Changes of Gene Frequency Under Simplfied Conditions
+
+## The idealized population
+
+## Sampling
+
+### Variance of gene frequency
+
+### Fixation
+
+### Genotype frequencies
+
+## Inbreeding
+
+### Inbreeding in the idealized population
+
+### Variance of gene frequency
+
+### Genotype frequencies

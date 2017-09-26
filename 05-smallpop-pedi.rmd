@@ -1,0 +1,25 @@
+# Small Populations: III. Pedigreed Populations and Close Inbreeding
+
+## Pedigreed populations
+
+### The inbreeding coefficient of an individual
+
+### Coancestry or kinship
+
+## Regular systems of inbreeding
+
+### Close inbreeding
+
+### Fixation
+
+### Repeated backcrosses
+
+### Crosses and subsequent generations
+
+### Mixed inbreeding and crossing
+
+### Change of base: strutured population
+
+### Mutation
+
+### Selection favouring heterozygotes

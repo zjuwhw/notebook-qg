@@ -1,0 +1,32 @@
+# Continuous Variation
+
+Variation without natural discontinuities, is called **continuous variation**, and character that exhibit it are called **quantitative characters** or **metric characters**, because their study depends on measurement instead of on counting.
+
+The branch of genetics concerned with metric characters is called **quantitative genetics** or **biometrical genetics**.
+
+How the intrinsically diiscontinous variation caused by genetic segregation is translated into the continuous variation of metric characters?
+
+- one is the simultaneous segregation of many genes affecting the character
+- the other is the superimposition of truly continuous variation arising from non-genetic causes.
+
+A gene with an effect large enough to cause a recognizable discontinuity even in the presnece of segregation at other loci and of non-genetic variation can be studied by Mendelian methods, whereas a gene whose effect is not large enough to cause a discontinuity cannot be studied individually. The distinction is reflected in the terms **major gene** and **minor gene**.
+
+Variation caused by the simultaneous segregation of many genes may be called **polygenic** variantion, and the minor genes concerned are sometimes referred to as polygenes.
+
+## Metric characters
+
+The frequency distributions of most metric characters approximate more or less closely to normal curves. Sometimes, however, the scale of measurement (such as in logarithmic units) must be modified if a distributiong approximating to the normal is to be obtained.
+
+There are two kinds of evidence supporting that metric characters really are controlled by genes at many loci:
+
+- The first is indirect: observations in general agree well with what is expected frome the theory of polygenic inheritance
+- The second is direct experimental evidence: loci affecting quantitative traits can be mapped on chromosomes by methods. And the loci are called **Quantitative Trait Loci**, or **QTLs**.
+
+## Properties of metric characters
+
+Two basic genetic phenomena concerned with metric characters:
+
+- the first is the resemblance between relatives
+- the second is inbreeding depression (近交衰退), with its converse hybrid vigour (杂种优势), or heterosis.
+
+The properties of a population that we can observe in connection with a metric character are means, variances and covariances.
