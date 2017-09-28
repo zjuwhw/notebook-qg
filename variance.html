@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="changes-of-gene-frequency.html">
-<link rel="next" href="small-populations-ii-less-simplified-conditions.html">
+<link rel="prev" href="values-and-means.html">
+<link rel="next" href="resemblance-between-relatives.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -265,35 +265,106 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="small-populations-i.-changes-of-gene-frequency-under-simplfied-conditions" class="section level1">
-<h1><span class="header-section-number">4</span> Small populations: I. Changes of Gene Frequency Under Simplfied Conditions</h1>
-<div id="the-idealized-population" class="section level2">
-<h2><span class="header-section-number">4.1</span> The idealized population</h2>
+<div id="variance" class="section level1">
+<h1><span class="header-section-number">9</span> Variance</h1>
+<p>The basic idea in the study of variation is its partitioning into components attributable to different causes.</p>
+<div id="components-of-variance" class="section level2">
+<h2><span class="header-section-number">9.1</span> Components of variance</h2>
+<p>The total variance is then, with certain qualifications (条件), the sum of the components, thus:</p>
+<p><span class="math display">\[V_P = V_G+V_E = V_A + V_D + V_I + V_E\]</span></p>
+<p>The qualifications:</p>
+<ul>
+<li>Cov(G,E) = 0. If it’s not zero, it will increase <span class="math inline">\(V_P\)</span> by <span class="math inline">\(2\times Cov(G,E)\)</span></li>
+<li>there is no interaction between genotypes and environments.</li>
+</ul>
+<p>Table 8.1 Components of variance</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Variance component</th>
+<th align="left">Symbol</th>
+<th align="left">Value whose variance is measured</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Phenotypic</td>
+<td align="left"><span class="math inline">\(V_P\)</span></td>
+<td align="left">Phenotypic value</td>
+</tr>
+<tr class="even">
+<td align="left">Genotypic</td>
+<td align="left"><span class="math inline">\(V_G\)</span></td>
+<td align="left">Genotypic value</td>
+</tr>
+<tr class="odd">
+<td align="left">Additive</td>
+<td align="left"><span class="math inline">\(V_A\)</span></td>
+<td align="left">Breeding value</td>
+</tr>
+<tr class="even">
+<td align="left">Domiance</td>
+<td align="left"><span class="math inline">\(V_D\)</span></td>
+<td align="left">Dominance deviation</td>
+</tr>
+<tr class="odd">
+<td align="left">Interaction</td>
+<td align="left"><span class="math inline">\(V_I\)</span></td>
+<td align="left">Interaction deviation</td>
+</tr>
+<tr class="even">
+<td align="left">Environmental</td>
+<td align="left"><span class="math inline">\(V_E\)</span></td>
+<td align="left">Environmental deviation</td>
+</tr>
+</tbody>
+</table>
+<div id="components-as-proportions-of-the-total" class="section level3">
+<h3><span class="header-section-number">9.1.1</span> Components as proportions of the total</h3>
+<p>The partitioning of the variance into its components allows us to estimate the relative importance of the various determinants of the phenotype, in particular the role of heredity versus environment, or nature and nurture.</p>
+<p>The relative importance of heredity in determining phenotypic values is called the <strong>heritability</strong> of the character.</p>
+<p>The ratio <span class="math inline">\(V_G/V_P\)</span> expresses the extent to which individuals’ phenotypes are determined by the genotypes. This is called the <strong>heritability in the broad sense</strong>, or <strong>the degree of genetic determination</strong>. The ratio <span class="math inline">\(V_A/V_P\)</span> expresses the extent to which phenotypes are determined by the genes transmitted from the parents. This is called the <strong>heritability in the narrow sense</strong>, or simply the <strong>heritability</strong>.</p>
+<p>The heritability <span class="math inline">\(V_A/V_P\)</span> determines the degree of resemblance between relatives and is therefore of the greatest importance in breeding programmes. The degree of genetic determination <span class="math inline">\(V_G/V_P\)</span> is of more theoretical interest than practical importance.</p>
 </div>
-<div id="sampling" class="section level2">
-<h2><span class="header-section-number">4.2</span> Sampling</h2>
-<div id="variance-of-gene-frequency" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Variance of gene frequency</h3>
-</div>
-<div id="fixation" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Fixation</h3>
-</div>
-<div id="genotype-frequencies" class="section level3">
-<h3><span class="header-section-number">4.2.3</span> Genotype frequencies</h3>
+<div id="estimation-of-the-degree-of-genetic-determination-v_gv_p" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> Estimation of the degree of genetic determination, <span class="math inline">\(V_G/V_P\)</span></h3>
+<p>Neither the genotypic nor the environmental components of variance, <span class="math inline">\(V_G\)</span> and <span class="math inline">\(V_E\)</span>, can be estimated directly from observations on a single populations, but in certain circumstances they can be estimated in experimental populations.</p>
+<p>Individuals with identical genotypes can be obtained from a highly inbred line or the <span class="math inline">\(F_1\)</span> of a cross between two such lines, or from a clone propagated from a single individual. (Identical twins in man and cattle also provide individuals of identical genotype, but their use in partitioning the variance is very limited for reasons to be discussed in Chapter 10.)</p>
 </div>
 </div>
-<div id="inbreeding" class="section level2">
-<h2><span class="header-section-number">4.3</span> Inbreeding</h2>
-<div id="inbreeding-in-the-idealized-population" class="section level3">
-<h3><span class="header-section-number">4.3.1</span> Inbreeding in the idealized population</h3>
+<div id="genetic-components-of-variance" class="section level2">
+<h2><span class="header-section-number">9.2</span> Genetic components of variance</h2>
+<div id="additive-and-dominance-variance" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Additive and dominance variance</h3>
 </div>
-<div id="variance-of-gene-frequency-1" class="section level3">
-<h3><span class="header-section-number">4.3.2</span> Variance of gene frequency</h3>
+<div id="total-genetic-variance" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Total genetic variance</h3>
 </div>
-<div id="genotype-frequencies-1" class="section level3">
-<h3><span class="header-section-number">4.3.3</span> Genotype frequencies</h3>
+<div id="interaction-variance" class="section level3">
+<h3><span class="header-section-number">9.2.3</span> Interaction variance</h3>
+</div>
+<div id="variance-due-to-disequilibrium" class="section level3">
+<h3><span class="header-section-number">9.2.4</span> Variance due to disequilibrium</h3>
+</div>
+</div>
+<div id="correlation-and-interaction-between-genotype-and-environment" class="section level2">
+<h2><span class="header-section-number">9.3</span> Correlation and interaction between genotype and environment</h2>
+<div id="correlation" class="section level3">
+<h3><span class="header-section-number">9.3.1</span> Correlation</h3>
+</div>
+<div id="interaction" class="section level3">
+<h3><span class="header-section-number">9.3.2</span> Interaction</h3>
+</div>
+</div>
+<div id="environmental-variance" class="section level2">
+<h2><span class="header-section-number">9.4</span> Environmental variance</h2>
+<div id="multiple-measurements-repeatability" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Multiple measurements: repeatability</h3>
+</div>
+</div>
+<div id="summary-of-variance-partitioning" class="section level2">
+<h2><span class="header-section-number">9.5</span> Summary of variance partitioning</h2>
 
-</div>
 </div>
 </div>
             </section>
@@ -301,8 +372,8 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           </div>
         </div>
       </div>
-<a href="changes-of-gene-frequency.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="small-populations-ii-less-simplified-conditions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="values-and-means.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resemblance-between-relatives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

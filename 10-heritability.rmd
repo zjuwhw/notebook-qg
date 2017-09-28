@@ -1,0 +1,23 @@
+# Heritability
+
+## Estimation of heritability
+
+### Offspring-parent regression
+
+### Sib analysis
+
+### Intra-sire regression of offspring on dam
+
+### Combined estimates
+
+## Twins and human data
+
+## Assortative mating
+
+## Precision of estimates and design of experiments
+
+### Offspring-parent regression
+
+### Sib analysis
+
+### Selection of parents

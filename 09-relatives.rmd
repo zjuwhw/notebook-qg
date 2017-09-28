@@ -1,0 +1,21 @@
+# Resemblance between relatives
+
+## Genetic covariance
+
+### Offspring and one parent
+
+### Offspring and mid-parent
+
+### Half sibs
+
+### Full sibs
+
+### Twins
+
+### General
+
+### Epistatic interaction
+
+## Environmental covariance
+
+## Phenotypic resemblance

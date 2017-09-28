@@ -1,0 +1,63 @@
+# Variance
+
+The basic idea in the study of variation is its partitioning into components attributable to different causes.
+
+## Components of variance
+
+The total variance is then, with certain qualifications (条件), the sum of the components, thus:
+
+$$V_P = V_G+V_E = V_A + V_D + V_I + V_E$$
+
+The qualifications:
+
+- Cov(G,E) = 0. If it's not zero, it will increase $V_P$ by $2\times Cov(G,E)$
+- there is no interaction between genotypes and environments.
+
+Table 8.1 Components of variance
+
+|Variance component|Symbol|Value whose variance is measured|
+|:--|:--|:--|
+|Phenotypic|$V_P$|Phenotypic value|
+|Genotypic|$V_G$|Genotypic value|
+|Additive|$V_A$|Breeding value|
+|Domiance|$V_D$|Dominance deviation|
+|Interaction|$V_I$|Interaction deviation|
+|Environmental|$V_E$|Environmental deviation|
+
+### Components as proportions of the total
+
+The partitioning of the variance into its components allows us to estimate the relative importance of the various determinants of the phenotype, in particular the role of heredity versus environment, or nature and nurture.
+
+The relative importance of heredity in determining phenotypic values is called the **heritability** of the character.
+
+The ratio $V_G/V_P$ expresses the extent to which individuals' phenotypes are determined by the genotypes. This is called the **heritability in the broad sense**, or **the degree of genetic determination**. The ratio $V_A/V_P$ expresses the extent to which phenotypes are determined by the genes transmitted from the parents. This is called the **heritability in the narrow sense**, or simply the **heritability**.
+
+The heritability $V_A/V_P$ determines the degree of resemblance between relatives and is therefore of the greatest importance in breeding programmes. The degree of genetic determination $V_G/V_P$ is of more theoretical interest than practical importance.
+
+### Estimation of the degree of genetic determination, $V_G/V_P$
+
+Neither the genotypic nor the environmental components of variance, $V_G$ and $V_E$, can be estimated directly from observations on a single populations, but in certain circumstances they can be estimated in experimental populations.
+
+Individuals with identical genotypes can be obtained from a highly inbred line or the $F_1$ of a cross between two such lines, or from a clone propagated from a single individual. (Identical twins in man and cattle also provide individuals of identical genotype, but their use in partitioning the variance is very limited for reasons to be discussed in Chapter 10.)
+
+## Genetic components of variance
+
+### Additive and dominance variance
+
+### Total genetic variance
+
+### Interaction variance
+
+### Variance due to disequilibrium
+
+## Correlation and interaction between genotype and environment
+
+### Correlation
+
+### Interaction
+
+## Environmental variance
+
+### Multiple measurements: repeatability
+
+## Summary of variance partitioning
