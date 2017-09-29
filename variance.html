@@ -336,15 +336,71 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <h2><span class="header-section-number">9.2</span> Genetic components of variance</h2>
 <div id="additive-and-dominance-variance" class="section level3">
 <h3><span class="header-section-number">9.2.1</span> Additive and dominance variance</h3>
+<p>The information needed to obtain expressions for the variance of breeding values and the variance of dominance deviations was given in the last chapter in Table 7.3. (Note: the expected of breeding values and domiance deviations are both 0.)</p>
+<p>The additive variance, which is the vraince of breeding values, is obtained as follows:</p>
+<p><span class="math display">\[V_A = p^2 \times (2q\alpha)^2 + 2pq \times ((q-p)\alpha)^2 + q^2 \times (-2p\alpha)^2 = 2pq[a+d(q-p)]^2\]</span></p>
+<p>Similarly, the variance of domiance deviations is</p>
+<p><span class="math display">\[V_D = p^2 \times (-2q^2d)^2 + 2pq \times (2pqd)^2 + q^2 \times (-2p^2d)^2 = (2pqd)^2\]</span></p>
 </div>
 <div id="total-genetic-variance" class="section level3">
 <h3><span class="header-section-number">9.2.2</span> Total genetic variance</h3>
+<p>So, the genotypic variance is</p>
+<p><span class="math display">\[V_G = V_A + V_D = 2pq[a+d(q-p)]^2 + [2pqd]^2\]</span></p>
+<p>Note: cov(A,D) = 0 due to the least square estimation.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">va =<span class="st"> </span><span class="cf">function</span>(a, d, p){
+  q =<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p
+  <span class="kw">return</span>(<span class="dv">2</span><span class="op">*</span>p<span class="op">*</span>q<span class="op">*</span>(a<span class="op">+</span>d<span class="op">*</span>(q<span class="op">-</span>p))<span class="op">^</span><span class="dv">2</span>)
+}
+vd =<span class="st"> </span><span class="cf">function</span>(a, d, p){
+  q =<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p
+  <span class="kw">return</span>((<span class="dv">2</span><span class="op">*</span>p <span class="op">*</span><span class="st"> </span>q <span class="op">*</span>d)<span class="op">^</span><span class="dv">2</span>)
+}
+vg =<span class="st"> </span><span class="cf">function</span>(a, d, p){
+  <span class="kw">return</span>(<span class="kw">va</span>(a,d,p) <span class="op">+</span><span class="st"> </span><span class="kw">vd</span> (a,d,p))
+}
+p =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.01</span>); q=<span class="dv">1</span><span class="op">-</span>p
+<span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">3</span>))
+
+a=<span class="dv">1</span>; d=<span class="dv">0</span>
+<span class="kw">plot</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">main=</span><span class="kw">paste</span>(<span class="st">&quot;a=&quot;</span>,a,<span class="st">&quot;, d=&quot;</span>,d,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>), <span class="dt">xlab=</span><span class="st">&quot;Gene(Allele) frequency, q&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;genetic components of variance&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vg</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vd</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;green&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">va</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
+
+a=<span class="dv">1</span>; d=<span class="dv">1</span>
+<span class="kw">plot</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">main=</span><span class="kw">paste</span>(<span class="st">&quot;a=&quot;</span>,a,<span class="st">&quot;, d=&quot;</span>,d,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>), <span class="dt">xlab=</span><span class="st">&quot;Gene(Allele) frequency, q&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;genetic components of variance&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vg</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vd</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;green&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">va</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
+
+a=<span class="dv">0</span>; d=<span class="dv">1</span>
+<span class="kw">plot</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">main=</span><span class="kw">paste</span>(<span class="st">&quot;a=&quot;</span>,a,<span class="st">&quot;, d=&quot;</span>,d,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>), <span class="dt">xlab=</span><span class="st">&quot;Gene(Allele) frequency, q&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;genetic components of variance&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vg</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">vd</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;green&quot;</span>)
+<span class="kw">lines</span>(q, <span class="kw">va</span>(a,d,p),<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
+
+<span class="kw">legend</span>(<span class="fl">0.1</span>,<span class="dv">1</span>,<span class="st">&quot;Genotypic variance&quot;</span>,<span class="dt">lty =</span> <span class="dv">1</span>, <span class="dt">col =</span><span class="st">&quot;red&quot;</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>)
+<span class="kw">legend</span>(<span class="fl">0.1</span>,<span class="fl">0.95</span>,<span class="st">&quot;Additive variance&quot;</span>,<span class="dt">lty =</span> <span class="dv">1</span>, <span class="dt">col =</span><span class="st">&quot;blue&quot;</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>)
+<span class="kw">legend</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="st">&quot;Dominance variance&quot;</span>,<span class="dt">lty =</span> <span class="dv">1</span>, <span class="dt">col =</span><span class="st">&quot;green&quot;</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>The graphs show the amounts of genotypic, additive, domiance variance arising from a single locus with two alleles, plotted against the gene(allele) frequency in threes cases: 1) no dominance (d=0); 2) complete dominance (d=a); 3) “pure” overdominance.</p>
+<p>The general conclusion to be drawn from these graphs is that genes contribute much more variance when at intermediate frequencies than when at high or low frequencies: recessives at low frequency, in particular, contribute very little variance.</p>
 </div>
 <div id="interaction-variance" class="section level3">
 <h3><span class="header-section-number">9.2.3</span> Interaction variance</h3>
+<p>If the genotypes at different loci show epistatic interaction, then the interactions give rise to a component of variance <span class="math inline">\(V_I\)</span>, which is the variance of the interaction deviations.</p>
+<p>Theoretical description of the properties of interaction variances rests on its further subdivision into components.</p>
+<p>It is first subdivided according to the number of loci involved: two-factor interaction arises from the interaction of two loci, three-factor from three loci, etc. Interactions involving larger numbers of loci contribute so little variance that they can be ignored.</p>
+<p>The nxt subdivision of the interaction variance is according to whether the interaction involves breeding values or domiance deviations. There are thus three sorts of two-factor interactions. Interaction between the two breeding values gives rise to additive <span class="math inline">\(\times\)</span> additive variance, <span class="math inline">\(V_{AA}\)</span>; interaction between the breeding value of one locus and the domiance deviation of the other gives rise to additive <span class="math inline">\(\times\)</span> domiance variance, <span class="math inline">\(V_{AD}\)</span>; and interaction between the two domiance deviations give rise to domiance <span class="math inline">\(\times\)</span> domiance variance, <span class="math inline">\(V_{DD}\)</span>.</p>
+<p>So,</p>
+<p><span class="math display">\[V_I = V_{AA} + V_{AD} + V_{DD} + etc.\]</span></p>
+<p>It is not easy, however, to estimate the amout of variance that it generates, and little is known about its relative importance as a source of variation. Th e experimental evidence is reviewd by Barker (1979). For further details of epistatic interaction, see Cockerham (1954, 1963), Kempthorne (1957), Crow and Kimura (1970).</p>
 </div>
 <div id="variance-due-to-disequilibrium" class="section level3">
 <h3><span class="header-section-number">9.2.4</span> Variance due to disequilibrium</h3>
+<p>The disequilibrium when the genotype freuqncies at two or more loci consideered jointly introduces an additional source of genetic variance. For simplicity, consider just tow loci which do not interact in the manner described above. Let G’ and G’‘be genotypic values of individuals with respect to each locus separately, and let G be the genotypic value with respect to both jointly, i.e., G = G’ + G’’. The total genotypic variance caused by the two loci together is then</p>
+<p><span class="math display">\[V_G = V_{G&#39;} + V_{G&#39;&#39;} + 2 cov(G&#39;,G&#39;&#39;)\]</span></p>
+<p>There are two forms</p>
 </div>
 </div>
 <div id="correlation-and-interaction-between-genotype-and-environment" class="section level2">

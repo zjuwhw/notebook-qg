@@ -44,11 +44,90 @@ Individuals with identical genotypes can be obtained from a highly inbred line o
 
 ### Additive and dominance variance
 
+The information needed to obtain expressions for the variance of breeding values and the variance of dominance deviations was given in the last chapter in Table 7.3. (Note: the expected of breeding values and domiance deviations are both 0.)
+
+The additive variance, which is the vraince of breeding values, is obtained as follows:
+
+$$V_A = p^2 \times (2q\alpha)^2 + 2pq \times ((q-p)\alpha)^2 + q^2 \times (-2p\alpha)^2 = 2pq[a+d(q-p)]^2$$
+
+Similarly, the variance of domiance deviations is
+
+$$V_D = p^2 \times (-2q^2d)^2 + 2pq \times (2pqd)^2 + q^2 \times (-2p^2d)^2 = (2pqd)^2$$
+
 ### Total genetic variance
+
+So, the genotypic variance is
+
+$$V_G = V_A + V_D = 2pq[a+d(q-p)]^2 + [2pqd]^2$$
+
+Note: cov(A,D) = 0 due to the least square estimation.
+
+```{r}
+va = function(a, d, p){
+  q = 1 - p
+  return(2*p*q*(a+d*(q-p))^2)
+}
+vd = function(a, d, p){
+  q = 1 - p
+  return((2*p * q *d)^2)
+}
+vg = function(a, d, p){
+  return(va(a,d,p) + vd (a,d,p))
+}
+p = seq(0,1,0.01); q=1-p
+layout(matrix(1:3,1,3))
+
+a=1; d=0
+plot(c(0,1),c(0,1),col = "white", main=paste("a=",a,", d=",d,sep=""), xlab="Gene(Allele) frequency, q", ylab="genetic components of variance")
+lines(q, vg(a,d,p),col="red")
+lines(q, vd(a,d,p),col="green")
+lines(q, va(a,d,p),col="blue")
+
+a=1; d=1
+plot(c(0,1),c(0,1),col = "white", main=paste("a=",a,", d=",d,sep=""), xlab="Gene(Allele) frequency, q", ylab="genetic components of variance")
+lines(q, vg(a,d,p),col="red")
+lines(q, vd(a,d,p),col="green")
+lines(q, va(a,d,p),col="blue")
+
+a=0; d=1
+plot(c(0,1),c(0,1),col = "white", main=paste("a=",a,", d=",d,sep=""), xlab="Gene(Allele) frequency, q", ylab="genetic components of variance")
+lines(q, vg(a,d,p),col="red")
+lines(q, vd(a,d,p),col="green")
+lines(q, va(a,d,p),col="blue")
+
+legend(0.1,1,"Genotypic variance",lty = 1, col ="red", bty="n")
+legend(0.1,0.95,"Additive variance",lty = 1, col ="blue", bty="n")
+legend(0.1,0.9,"Dominance variance",lty = 1, col ="green", bty="n")
+```
+
+The graphs show the amounts of genotypic, additive, domiance variance arising from a single locus with two alleles, plotted against the gene(allele) frequency in threes cases: 1) no dominance (d=0); 2) complete dominance (d=a); 3) "pure" overdominance.
+
+The general conclusion to be drawn from these graphs is that genes contribute much more variance when at intermediate frequencies than when at high or low frequencies: recessives at low frequency, in particular, contribute very little variance.
 
 ### Interaction variance
 
+If the genotypes at different loci show epistatic interaction, then the interactions give rise to a component of variance $V_I$, which is the variance of the interaction deviations.
+
+Theoretical description of the properties of interaction variances rests on its further subdivision into components.
+
+It is first subdivided according to the number of loci involved: two-factor interaction arises from the interaction of two loci, three-factor from three loci, etc. Interactions involving larger numbers of loci contribute so little variance that they can be ignored.
+
+The nxt subdivision of the interaction variance is according to whether the interaction involves breeding values or domiance deviations. There are thus three sorts of two-factor interactions. Interaction between the two breeding values gives rise to additive $\times$ additive variance, $V_{AA}$; interaction between the breeding value of one locus and the domiance deviation of the other gives rise to additive $\times$ domiance variance, $V_{AD}$; and interaction between the two domiance deviations give rise to domiance $\times$ domiance variance, $V_{DD}$.
+
+So,
+
+$$V_I = V_{AA} + V_{AD} + V_{DD} + etc.$$
+
+It is not easy, however, to estimate the amout of variance that it generates, and little is known about its relative importance as a source of variation. Th e experimental evidence is reviewd by Barker (1979). For further details of epistatic interaction, see Cockerham (1954, 1963), Kempthorne (1957), Crow and Kimura (1970).
+
+
 ### Variance due to disequilibrium
+
+The disequilibrium when the genotype freuqncies at two or more loci consideered jointly introduces an additional source of genetic variance. For simplicity, consider just tow loci which do not interact in the manner described above. Let G' and G'' be genotypic values of individuals with respect to each locus separately, and let G be the genotypic value with respect to both jointly, i.e., G = G' + G''. The total genotypic variance caused by the two loci together is then
+
+$$V_G = V_{G'} + V_{G''} + 2 cov(G',G'')$$
+
+There are two forms
 
 ## Correlation and interaction between genotype and environment
 
