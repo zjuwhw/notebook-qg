@@ -96,7 +96,21 @@ The regression of offspring on parents is a useful measure of the degree of rese
 
 ### Half sibs
 
-Half sibs are individuals that have one parent in common and the other parent differnt.
+Way 1:
+
+Half sibs are individuals that have one parent in common and the other parent differnt. The mean genotypic value of the group of half sibs is by definition half the breeding value of the common parent. The covariance is the variance of the true means of the half-sib groups, and is therefore the variance of half the breeding values of the common parents:
+
+$$cov_{(HS)} = V_{\frac{1}{2}A} = \frac{1}{4}V_A$$
+
+Way 2:
+
+From table 9.1, we can get
+
+$$cov_{(HS)} = [q\alpha]^2 \times p^2 + [\frac{1}{2}(q-p)\alpha]^2 \times 2pq + [-p\alpha]^2 \times q^2 = \frac{1}{2}pq\alpha^2 = \frac{1}{4}V_A$$
+
+The degree of resemblance between sibs is expressed as the intraclass correlation, which is the between-group varaince, i.e., the covariance as a proportion of the total varaince. So the correlation of half sibs is
+
+$$t= \frac{1}{4}\frac{V_A}{V_P}$$
 
 ### Full sibs
 
@@ -117,6 +131,7 @@ Table 9.3 Coefficients of the variance components in the covariances of relative
 ||Double first cousin|-|-|
 |Third-degree|Offspring:great-grandparent|1/8|0|
 ||Single first cousin|-|-|
+
 ### Epistatic interaction
 
 ## Environmental covariance
