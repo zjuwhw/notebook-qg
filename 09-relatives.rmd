@@ -1,12 +1,102 @@
 # Resemblance between relatives
 
+The resemblance between relatives is one of the basic genetic phenomena displayed by metric characters, and the degree of resemblence is a property of the character.
+
+- casual components
+- observational components
+
+The resemblance between related individuals, can be looked at
+
+- similarity of individuals in the same group
+- difference between individuals in different groups
+
+The covariance of related individuals is a new property of the population.
+
+Both genetic and environmental sources of variance contribute to the covaraince of relatives, the covariance of phenotypic values being the sum of the genetic and environmental covariances.
+
 ## Genetic covariance
+
+Assumpation: HWE, random mating, no epistatic interaction.
 
 ### Offspring and one parent
 
+Way 1:
+
+The covariance is that of an individual's genotypic value with half its breeding value.
+
+$$cov_{OP} = cov(G,\frac{1}{2}A) = cov(A+D,\frac{1}{2}A) = cov(A,\frac{1}{2}A) + cov(D,\frac{1}{2}A) = \frac{1}{2}V_A$$
+
+Note: cov(D,A) = 0
+
+The genetic covariance of offspring and one parent is therefore half the additive genetic variance of the parents.
+
+Way 2:
+
+For one locus with two alleles, we can get the table below.
+
+Table 9.1
+
+|Parents' Gentoype|Genotype Frequence|Genotypic value|Breeding value|Offspring mean genotypic value|
+|:--|:--|:--|:--|:--|
+|$A_1A_1$|$p^2$|$2q(\alpha-qd)$|$2q\alpha$|$q\alpha$|
+|$A_1A_2$|$2pq$|$(q-p)\alpha+2pqd$|$(q-p)\alpha$|$\frac{1}{2}(q-p)\alpha$|
+|$A_2A_2$|$q^2$|$-2p(\alpha+pd)$|$-2p\alpha$|$-p\alpha$|
+
+Note: the genotypic value in the table is the deviations from the population mean.
+
+$$cov_{OP} = [2q(\alpha-qd)] \times [q\alpha] \times [p^2] + [(q-p)\alpha+2pqd] \times [\frac{1}{2}(q-p)\alpha] \times[2pq] + [-2p(\alpha+pd)]\times [-p\alpha] \times [q^2] = pq\alpha^2 = \frac{1}{2}V_A$$
+
+Summing over all loci we again reach the conclusion that the covariance of offspring and one parent is equal to half the additive variance.
+
+The regression of offspring on one parent is got by dividing the covariance by the variance of the parents, which is the phenotypic variance of the population.
+
+$$b_{OP} = \frac{cov_{OP}}{V_P} = \frac{1}{2}\frac{V_A}{V_P}$$
+
 ### Offspring and mid-parent
 
+Way 1:
+
+$$cov_{O\bar{P}} = cov(\frac{1}{2}(G_1+G_2),\frac{1}{2}A) = \frac{1}{2}(cov_{OP_1} + cov_{OP_2}) = \frac{1}{2}V_A$$
+If $G_1$ and $G_2$ have the same variance, then $cov_{OP_1}$ = $cov_{OP_2}$/
+
+Thus, provided the two sexes have equal variances, the covariance of offspring and mid-parent is the same as that of offspring with one parent.
+
+Way 2:
+
+Table 9.2
+
+|Genotype of parents||Frequencies of mating|Mid-parent value|Progeny genotypic value for $A_1A_1$ (a)|Progeny genotypic value for $A_1A_2$ (d)|Progeny genotypic value for $A_2A_2$ (-a)|Mean value of progeny|
+|--|--|--|--|--|--|--|--|
+|$A_1A_1$|$A_1A_1$|$p^4$|a|1|-|-|a|
+|$A_1A_1$|$A_1A_2$|$4p^3q$|$\frac{1}{2}(a+d)$|$\frac{1}{2}$|$\frac{1}{2}$|-|$\frac{1}{2}(a+d)$|
+|$A_1A_1$|$A_2A_2$|$2p^2q^2$|0|-|1|-|d|
+|$A_1A_2$|$A_1A_2$|$4p^2q^2$|d|$\frac{1}{4}$|$\frac{1}{2}$|$\frac{1}{4}$|$\frac{1}{2}d$|
+|$A_1A_2$|$A_2A_2$|$4pq^3$|$\frac{1}{2}(-a+d)$|-|$\frac{1}{2}$|$\frac{1}{2}$|$\frac{1}{2}(-a+d)$|
+|$A_2A_2$|$A_2A_2$|$p^4$|-a|-|-|1|-a|
+
+$$cov_{O\bar{P}} = MP - M^2 $$
+
+where MP is the mean product, and $M^2$ is the square of population mean.
+
+$$cov_{O\bar{P}} = a^2 \times p^4 + [\frac{1}{2}(a+d)]^2 \times 4p^3q + 0 + \frac{1}{2}d^2 \times 4p^2q^2 + [\frac{1}{2}(-a+d)]^2 \times 4pq^3 + a^2\times q^4 - [a(p-q)+2dpq]^2$$
+
+$$cov_{O\bar{P}} = pq\alpha^2 = \frac{1}{2}V_A$$
+
+Although $cov_{OP}$ is same with $cov_{O\bar{P}}$, the regression (degree of resemblance) is not the same.
+
+$$b_{O\bar{P}} = \frac{cov_{O\bar{P}}}{\sigma^2_{O\bar{P}}}$$
+
+$$\sigma^2_{\bar{P}} = var(\frac{1}{2}(P_1+P_2)) = \frac{1}{4}\times (var(P_1) + var(P_2)) = \frac{1}{2}V_P$$
+
+So
+
+$$b_{O\bar{P}} = \frac{V_A}{V_P}$$
+
+The regression of offspring on parents is a useful measure of the degree of resemblance.
+
 ### Half sibs
+
+Half sibs are individuals that have one parent in common and the other parent differnt.
 
 ### Full sibs
 
@@ -14,6 +104,19 @@
 
 ### General
 
+Table 9.3 Coefficients of the variance components in the covariances of relative.
+
+|Relationship||Coefficient r (of $V_A$)|Coefficient u (of $V_D$)|
+|:--|:--|:--|:--|
+|MZ twins||1|1|
+|First-degree|Offspring:parent|1/2|0|
+||Full sib|1/2|1/4|
+|Second-degree|Half sib|1/4|0|
+||Offspring:grandparent|-|-|
+||Uncle(aunt):nephew(niece)|-|-|
+||Double first cousin|-|-|
+|Third-degree|Offspring:great-grandparent|1/8|0|
+||Single first cousin|-|-|
 ### Epistatic interaction
 
 ## Environmental covariance

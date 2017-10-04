@@ -400,26 +400,91 @@ a=<span class="dv">0</span>; d=<span class="dv">1</span>
 <h3><span class="header-section-number">9.2.4</span> Variance due to disequilibrium</h3>
 <p>The disequilibrium when the genotype freuqncies at two or more loci consideered jointly introduces an additional source of genetic variance. For simplicity, consider just tow loci which do not interact in the manner described above. Let G’ and G’‘be genotypic values of individuals with respect to each locus separately, and let G be the genotypic value with respect to both jointly, i.e., G = G’ + G’’. The total genotypic variance caused by the two loci together is then</p>
 <p><span class="math display">\[V_G = V_{G&#39;} + V_{G&#39;&#39;} + 2 cov(G&#39;,G&#39;&#39;)\]</span></p>
-<p>There are two forms</p>
 </div>
 </div>
 <div id="correlation-and-interaction-between-genotype-and-environment" class="section level2">
 <h2><span class="header-section-number">9.3</span> Correlation and interaction between genotype and environment</h2>
 <div id="correlation" class="section level3">
 <h3><span class="header-section-number">9.3.1</span> Correlation</h3>
+<p><span class="math display">\[V_P = V_G + V_E + 2cov(G,E)\]</span></p>
 </div>
 <div id="interaction" class="section level3">
 <h3><span class="header-section-number">9.3.2</span> Interaction</h3>
+<p><span class="math display">\[P = G + E + I_{GE}\]</span></p>
+<p><span class="math display">\[V_P = V_G + V_E + 2cov_{GE} + V_{GE}\]</span></p>
+<p>The variance due to interaction is included with the environmental variance estimated from the phenotypic variance of that genotype.</p>
+<p>To some extent, the environmental variance is a property of the genotype. But the source of the variation is environmental and not genetic. It is therefore logical, as well as experimentally necessary, to regard any variance due to genotype-environment interaction as being part of the environmental variance included in any estimate of <span class="math inline">\(V_E\)</span>.</p>
+<div id="environmental-sensitivity" class="section level4">
+<h4><span class="header-section-number">9.3.2.1</span> Environmental sensitivity</h4>
+<p>Some of the genotype-environment interaction can be ascribed to differences of sensitivity of different genotypes. Then environmental sensitivity of a genotype is also known as its “<strong>reaction norm</strong>”.</p>
+<p>The only way in which environments can be quantified is by the mean performance of all the genotypes. In other words, the measure of an environment is the mean of all genotypes in that environment. This will be called the <strong>environmental value</strong>.</p>
+<p>The variance due to interaction of genotypes with the specific environments is estimated from an analysis of variance, and the amount attributable to differences of sensitivity is obtained from the heterogeneity of regeression slops.</p>
+</div>
 </div>
 </div>
 <div id="environmental-variance" class="section level2">
 <h2><span class="header-section-number">9.4</span> Environmental variance</h2>
+<p>Environmental variance, which by definition embraces all variation of non-genetic origin, can have a great variety of causes and its nature depends very much on the character and the organism studied.</p>
+<ul>
+<li>Nutritional（营养因素） and climatic（气候因素） factors</li>
+<li>Maternal effects（母亲因素）</li>
+<li>prenatal influences（出生前影响）</li>
+<li>postnatal influences（出生后影响）</li>
+<li>Error of measurement</li>
+</ul>
 <div id="multiple-measurements-repeatability" class="section level3">
 <h3><span class="header-section-number">9.4.1</span> Multiple measurements: repeatability</h3>
+<p>When more than one measurement of the character can be made on each individual, the phenotypic variance can be partitioned into variance within individuals and variance between individuals. This partitioning leads to a ratio of variance components called the <strong>repeatability</strong>.</p>
+<ul>
+<li>temporal（时间的） repetition</li>
+<li>spatial（空间的） repetition</li>
+</ul>
+<p>In order that we may discuss both temporal and spatial repetition together, we shall use the terms <strong>special environmental variance</strong>, <span class="math inline">\(V_{Es}\)</span>, to refer to the within-individual variance arising from temporary or localized circumstances; and <strong>general environmental variance</strong>, <span class="math inline">\(V_{Eg}\)</span>, to refer to the environmental variance contributing to the between-individual component and arising from permanent or non-localized circumstances. The ratio of the between-individual component to the total phenotypic variance is the intraclass correlation r. It is the correlation between repeated measurements of the same individual, and is known as the repeatability of the character.</p>
+<p><span class="math display">\[V_P = (V_G + V_{Eg}) + V_{Es}\]</span></p>
+<p><span class="math display">\[r = \frac{V_G + V_{Eg}}{V_P}\]</span></p>
+<p><span class="math display">\[\frac{V_{Es}}{V_P} = 1-r\]</span></p>
+<p>It can be seen that the repeatability sets an upper limit to the degree of genetic determination <span class="math inline">\(V_G/V_P\)</span>, and to the heritability <span class="math inline">\(V_A/V_P\)</span>.</p>
 </div>
 </div>
 <div id="summary-of-variance-partitioning" class="section level2">
 <h2><span class="header-section-number">9.5</span> Summary of variance partitioning</h2>
+<p>Table 8.5 Summary of variance partitioning</p>
+<table style="width:17%;">
+<colgroup>
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Data needed</th>
+<th align="left">Partition made</th>
+<th align="left">Ratio estimated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Resemblance between relatives</td>
+<td align="left"><span class="math inline">\((V_A):(V_{NA} + V_{Eg} + V_{Es})\)</span></td>
+<td align="left">heritability, <span class="math inline">\(V_A/V_P\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Genetically uniform group</td>
+<td align="left"><span class="math inline">\((V_A + V_{NA}):(V_{Eg} + V_{Es}) = (V_G):(V_E)\)</span></td>
+<td align="left">degree of genetic determination, <span class="math inline">\(V_G/V_P\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Multiple measurements</td>
+<td align="left"><span class="math inline">\((V_G + V_{Eg}):V_{Es}\)</span></td>
+<td align="left">repeatability (<span class="math inline">\(V_G+V_{Eg}/V_P\)</span>)</td>
+</tr>
+<tr class="even">
+<td align="left">All three</td>
+<td align="left"><span class="math inline">\(V_A:V_{NA}:V_{Eg}:V_{Es}\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>

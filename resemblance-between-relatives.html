@@ -267,16 +267,185 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
             <section class="normal" id="section-">
 <div id="resemblance-between-relatives" class="section level1">
 <h1><span class="header-section-number">10</span> Resemblance between relatives</h1>
+<p>The resemblance between relatives is one of the basic genetic phenomena displayed by metric characters, and the degree of resemblence is a property of the character.</p>
+<ul>
+<li>casual components</li>
+<li>observational components</li>
+</ul>
+<p>The resemblance between related individuals, can be looked at</p>
+<ul>
+<li>similarity of individuals in the same group</li>
+<li>difference between individuals in different groups</li>
+</ul>
+<p>The covariance of related individuals is a new property of the population.</p>
+<p>Both genetic and environmental sources of variance contribute to the covaraince of relatives, the covariance of phenotypic values being the sum of the genetic and environmental covariances.</p>
 <div id="genetic-covariance" class="section level2">
 <h2><span class="header-section-number">10.1</span> Genetic covariance</h2>
+<p>Assumpation: HWE, random mating, no epistatic interaction.</p>
 <div id="offspring-and-one-parent" class="section level3">
 <h3><span class="header-section-number">10.1.1</span> Offspring and one parent</h3>
+<p>Way 1:</p>
+<p>The covariance is that of an individual’s genotypic value with half its breeding value.</p>
+<p><span class="math display">\[cov_{OP} = cov(G,\frac{1}{2}A) = cov(A+D,\frac{1}{2}A) = cov(A,\frac{1}{2}A) + cov(D,\frac{1}{2}A) = \frac{1}{2}V_A\]</span></p>
+<p>Note: cov(D,A) = 0</p>
+<p>The genetic covariance of offspring and one parent is therefore half the additive genetic variance of the parents.</p>
+<p>Way 2:</p>
+<p>For one locus with two alleles, we can get the table below.</p>
+<p>Table 9.1</p>
+<table style="width:28%;">
+<colgroup>
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Parents’ Gentoype</th>
+<th align="left">Genotype Frequence</th>
+<th align="left">Genotypic value</th>
+<th align="left">Breeding value</th>
+<th align="left">Offspring mean genotypic value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_1A_1\)</span></td>
+<td align="left"><span class="math inline">\(p^2\)</span></td>
+<td align="left"><span class="math inline">\(2q(\alpha-qd)\)</span></td>
+<td align="left"><span class="math inline">\(2q\alpha\)</span></td>
+<td align="left"><span class="math inline">\(q\alpha\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(A_1A_2\)</span></td>
+<td align="left"><span class="math inline">\(2pq\)</span></td>
+<td align="left"><span class="math inline">\((q-p)\alpha+2pqd\)</span></td>
+<td align="left"><span class="math inline">\((q-p)\alpha\)</span></td>
+<td align="left"><span class="math inline">\(\frac{1}{2}(q-p)\alpha\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_2A_2\)</span></td>
+<td align="left"><span class="math inline">\(q^2\)</span></td>
+<td align="left"><span class="math inline">\(-2p(\alpha+pd)\)</span></td>
+<td align="left"><span class="math inline">\(-2p\alpha\)</span></td>
+<td align="left"><span class="math inline">\(-p\alpha\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Note: the genotypic value in the table is the deviations from the population mean.</p>
+<p><span class="math display">\[cov_{OP} = [2q(\alpha-qd)] \times [q\alpha] \times [p^2] + [(q-p)\alpha+2pqd] \times [\frac{1}{2}(q-p)\alpha] \times[2pq] + [-2p(\alpha+pd)]\times [-p\alpha] \times [q^2] = pq\alpha^2 = \frac{1}{2}V_A\]</span></p>
+<p>Summing over all loci we again reach the conclusion that the covariance of offspring and one parent is equal to half the additive variance.</p>
+<p>The regression of offspring on one parent is got by dividing the covariance by the variance of the parents, which is the phenotypic variance of the population.</p>
+<p><span class="math display">\[b_{OP} = \frac{cov_{OP}}{V_P} = \frac{1}{2}\frac{V_A}{V_P}\]</span></p>
 </div>
 <div id="offspring-and-mid-parent" class="section level3">
 <h3><span class="header-section-number">10.1.2</span> Offspring and mid-parent</h3>
+<p>Way 1:</p>
+<p><span class="math display">\[cov_{O\bar{P}} = cov(\frac{1}{2}(G_1+G_2),\frac{1}{2}A) = \frac{1}{2}(cov_{OP_1} + cov_{OP_2}) = \frac{1}{2}V_A\]</span> If <span class="math inline">\(G_1\)</span> and <span class="math inline">\(G_2\)</span> have the same variance, then <span class="math inline">\(cov_{OP_1}\)</span> = <span class="math inline">\(cov_{OP_2}\)</span>/</p>
+<p>Thus, provided the two sexes have equal variances, the covariance of offspring and mid-parent is the same as that of offspring with one parent.</p>
+<p>Way 2:</p>
+<p>Table 9.2</p>
+<table style="width:33%;">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Genotype of parents</th>
+<th></th>
+<th>Frequencies of mating</th>
+<th>Mid-parent value</th>
+<th>Progeny genotypic value for <span class="math inline">\(A_1A_1\)</span> (a)</th>
+<th>Progeny genotypic value for <span class="math inline">\(A_1A_2\)</span> (d)</th>
+<th>Progeny genotypic value for <span class="math inline">\(A_2A_2\)</span> (-a)</th>
+<th>Mean value of progeny</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A_1A_1\)</span></td>
+<td><span class="math inline">\(A_1A_1\)</span></td>
+<td><span class="math inline">\(p^4\)</span></td>
+<td>a</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>a</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A_1A_1\)</span></td>
+<td><span class="math inline">\(A_1A_2\)</span></td>
+<td><span class="math inline">\(4p^3q\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}(a+d)\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td>-</td>
+<td><span class="math inline">\(\frac{1}{2}(a+d)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A_1A_1\)</span></td>
+<td><span class="math inline">\(A_2A_2\)</span></td>
+<td><span class="math inline">\(2p^2q^2\)</span></td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>-</td>
+<td>d</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A_1A_2\)</span></td>
+<td><span class="math inline">\(A_1A_2\)</span></td>
+<td><span class="math inline">\(4p^2q^2\)</span></td>
+<td>d</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}d\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A_1A_2\)</span></td>
+<td><span class="math inline">\(A_2A_2\)</span></td>
+<td><span class="math inline">\(4pq^3\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}(-a+d)\)</span></td>
+<td>-</td>
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td><span class="math inline">\(\frac{1}{2}(-a+d)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A_2A_2\)</span></td>
+<td><span class="math inline">\(A_2A_2\)</span></td>
+<td><span class="math inline">\(p^4\)</span></td>
+<td>-a</td>
+<td>-</td>
+<td>-</td>
+<td>1</td>
+<td>-a</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[cov_{O\bar{P}} = MP - M^2 \]</span></p>
+<p>where MP is the mean product, and <span class="math inline">\(M^2\)</span> is the square of population mean.</p>
+<p><span class="math display">\[cov_{O\bar{P}} = a^2 \times p^4 + [\frac{1}{2}(a+d)]^2 \times 4p^3q + 0 + \frac{1}{2}d^2 \times 4p^2q^2 + [\frac{1}{2}(-a+d)]^2 \times 4pq^3 + a^2\times q^4 - [a(p-q)+2dpq]^2\]</span></p>
+<p><span class="math display">\[cov_{O\bar{P}} = pq\alpha^2 = \frac{1}{2}V_A\]</span></p>
+<p>Although <span class="math inline">\(cov_{OP}\)</span> is same with <span class="math inline">\(cov_{O\bar{P}}\)</span>, the regression (degree of resemblance) is not the same.</p>
+<p><span class="math display">\[b_{O\bar{P}} = \frac{cov_{O\bar{P}}}{\sigma^2_{O\bar{P}}}\]</span></p>
+<p><span class="math display">\[\sigma^2_{\bar{P}} = var(\frac{1}{2}(P_1+P_2)) = \frac{1}{4}\times (var(P_1) + var(P_2)) = \frac{1}{2}V_P\]</span></p>
+<p>So</p>
+<p><span class="math display">\[b_{O\bar{P}} = \frac{V_A}{V_P}\]</span></p>
+<p>The regression of offspring on parents is a useful measure of the degree of resemblance.</p>
 </div>
 <div id="half-sibs" class="section level3">
 <h3><span class="header-section-number">10.1.3</span> Half sibs</h3>
+<p>Half sibs are individuals that have one parent in common and the other parent differnt.</p>
 </div>
 <div id="full-sibs" class="section level3">
 <h3><span class="header-section-number">10.1.4</span> Full sibs</h3>
@@ -286,6 +455,73 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 </div>
 <div id="general" class="section level3">
 <h3><span class="header-section-number">10.1.6</span> General</h3>
+<p>Table 9.3 Coefficients of the variance components in the covariances of relative.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Relationship</th>
+<th align="left"></th>
+<th align="left">Coefficient r (of <span class="math inline">\(V_A\)</span>)</th>
+<th align="left">Coefficient u (of <span class="math inline">\(V_D\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">MZ twins</td>
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">First-degree</td>
+<td align="left">Offspring:parent</td>
+<td align="left">1/2</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Full sib</td>
+<td align="left">1/2</td>
+<td align="left">1/4</td>
+</tr>
+<tr class="even">
+<td align="left">Second-degree</td>
+<td align="left">Half sib</td>
+<td align="left">1/4</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Offspring:grandparent</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Uncle(aunt):nephew(niece)</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Double first cousin</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Third-degree</td>
+<td align="left">Offspring:great-grandparent</td>
+<td align="left">1/8</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Single first cousin</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="epistatic-interaction" class="section level3">
 <h3><span class="header-section-number">10.1.7</span> Epistatic interaction</h3>

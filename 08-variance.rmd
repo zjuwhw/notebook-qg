@@ -127,16 +127,64 @@ The disequilibrium when the genotype freuqncies at two or more loci consideered 
 
 $$V_G = V_{G'} + V_{G''} + 2 cov(G',G'')$$
 
-There are two forms
-
 ## Correlation and interaction between genotype and environment
 
 ### Correlation
 
+$$V_P = V_G + V_E + 2cov(G,E)$$
+
 ### Interaction
+
+$$P = G + E + I_{GE}$$
+
+$$V_P = V_G + V_E + 2cov_{GE} + V_{GE}$$
+
+The variance due to interaction is included with the environmental variance estimated from the phenotypic variance of that genotype.
+
+To some extent, the environmental variance is a property of the genotype. But the source of the variation is environmental and not genetic. It is therefore logical, as well as experimentally necessary, to regard any variance due to genotype-environment interaction as being part of the environmental variance included in any estimate of $V_E$.
+
+#### Environmental sensitivity
+
+Some of the genotype-environment interaction can be ascribed to differences of sensitivity of different genotypes. Then environmental sensitivity of a genotype is also known as its "**reaction norm**".
+
+The only way in which environments can be quantified is by the mean performance of all the genotypes. In other words, the measure of an environment is the mean of all genotypes in that environment. This will be called the **environmental value**.
+
+The variance due to interaction of genotypes with the specific environments is estimated from an analysis of variance, and the amount attributable to differences of sensitivity is obtained from the heterogeneity of regeression slops.
 
 ## Environmental variance
 
+Environmental variance, which by definition embraces all variation of non-genetic origin, can have a great variety of causes and its nature depends very much on the character and the organism studied.
+
+- Nutritional（营养因素） and climatic（气候因素） factors
+- Maternal effects（母亲因素）
+  - prenatal influences（出生前影响）
+  - postnatal influences（出生后影响）
+- Error of measurement
+
 ### Multiple measurements: repeatability
 
+When more than one measurement of the character can be made on each individual, the phenotypic variance can be partitioned into variance within individuals and variance between individuals. This partitioning leads to a ratio of variance components called the **repeatability**.
+
+- temporal（时间的） repetition
+- spatial（空间的） repetition
+
+In order that we may discuss both temporal and spatial repetition together, we shall use the terms **special environmental variance**, $V_{Es}$, to refer to the within-individual variance arising from temporary or localized circumstances; and **general environmental variance**, $V_{Eg}$, to refer to the environmental variance contributing to the between-individual component and arising from permanent or non-localized circumstances. The ratio of the between-individual component to the total phenotypic variance is the intraclass correlation r. It is the correlation between repeated measurements of the same individual, and is known as the repeatability of the character.
+
+$$V_P = (V_G + V_{Eg}) + V_{Es}$$
+
+$$r = \frac{V_G + V_{Eg}}{V_P}$$
+
+$$\frac{V_{Es}}{V_P} = 1-r$$
+
+It can be seen that the repeatability sets an upper limit to the degree of genetic determination $V_G/V_P$, and to the heritability $V_A/V_P$.
+
 ## Summary of variance partitioning
+
+Table 8.5 Summary of variance partitioning
+
+|Data needed|Partition made|Ratio estimated|
+|:--|:--|:--|
+|Resemblance between relatives|$(V_A):(V_{NA} + V_{Eg} + V_{Es})$|heritability, $V_A/V_P$|
+|Genetically uniform group|$(V_A + V_{NA}):(V_{Eg} + V_{Es}) = (V_G):(V_E)$|degree of genetic determination, $V_G/V_P$|
+|Multiple measurements|$(V_G + V_{Eg}):V_{Es}$|repeatability ($V_G+V_{Eg}/V_P$)|
+|All three|$V_A:V_{NA}:V_{Eg}:V_{Es}$||
