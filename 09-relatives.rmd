@@ -114,9 +114,47 @@ $$t= \frac{1}{4}\frac{V_A}{V_P}$$
 
 ### Full sibs
 
+The covariance of full sibs is less simple than those of the relationships so far considered, because the domiance variance contributes to it.
+
+Way 1:
+
+Consider the covariance due to the additive variance first.
+
+Full sibs have both parents in common, so the covariance is the variance of $\frac{1}{2}(A_1+A_2)$, which is $\frac{1}{2}V_A$ if the additive variance is the same in the two sexes.
+
+Now consider the contribution of domiance. It should be $\frac{1}{4}V_D$.
+
+$$Cov_{(FS)} = \frac{1}{2}V_A + \frac{1}{4}V_D$$
+
+Way 2:
+
+From Table 9.2,
+
+$$cov_{(FS)} = a^2 \times p^4 + [\frac{1}{2}(a+d)]^2 \times 4p^3q + d^2\times 2p^2q^2 + \frac{1}{4}d^2 \times 4p^2q^2 + [\frac{1}{2}(-a+d)]^2 \times 4pq^3 + a^2\times q^4 - [a(p-q)+2dpq]^2$$
+
+$$cov_{(FS)} = cov_{O\bar{P}} + d^2p^2q^ =  \frac{1}{2}V_A + \frac{1}{4}V_D$$
+
+The correlation of full sibs is:
+
+$$t = \frac{\frac{1}{2}V_A + \frac{1}{4}V_D}{V_P}$$
+
+In principle the difference between the covariances of full sibs and of half sibs provides a way of estimating the domiance variance, since $cov_{(FS)}-2cov_{(HS)} = \frac{1}{4}V_D$. In practice, however, this can be done only if there is no environmental contributions to the phenotypic covariances.
+
 ### Twins
 
+For dizygotic (fraternal) twins are related as full sibs and their genetic covariance is that of full sibs.
+
+For monozygotic (identical) twins have identical genotypes, so there is no genetic variance within pairs and the whole of the genetic vaiance appears in the between-pair component. The genetic covariance is therefore
+
+$$cov_{(MZ)} = V_G$$
+
 ### General
+
+The generalized covariance for any sort of relationship is
+
+$$cov = rV_A + uV_D$$
+
+The coefficient r of the additive varaince is sometimes called the **coefficient of relationship**, or the **theoretical correlation**.
 
 Table 9.3 Coefficients of the variance components in the covariances of relative.
 

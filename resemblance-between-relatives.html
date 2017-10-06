@@ -456,12 +456,31 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 </div>
 <div id="full-sibs" class="section level3">
 <h3><span class="header-section-number">10.1.4</span> Full sibs</h3>
+<p>The covariance of full sibs is less simple than those of the relationships so far considered, because the domiance variance contributes to it.</p>
+<p>Way 1:</p>
+<p>Consider the covariance due to the additive variance first.</p>
+<p>Full sibs have both parents in common, so the covariance is the variance of <span class="math inline">\(\frac{1}{2}(A_1+A_2)\)</span>, which is <span class="math inline">\(\frac{1}{2}V_A\)</span> if the additive variance is the same in the two sexes.</p>
+<p>Now consider the contribution of domiance. It should be <span class="math inline">\(\frac{1}{4}V_D\)</span>.</p>
+<p><span class="math display">\[Cov_{(FS)} = \frac{1}{2}V_A + \frac{1}{4}V_D\]</span></p>
+<p>Way 2:</p>
+<p>From Table 9.2,</p>
+<p><span class="math display">\[cov_{(FS)} = a^2 \times p^4 + [\frac{1}{2}(a+d)]^2 \times 4p^3q + d^2\times 2p^2q^2 + \frac{1}{4}d^2 \times 4p^2q^2 + [\frac{1}{2}(-a+d)]^2 \times 4pq^3 + a^2\times q^4 - [a(p-q)+2dpq]^2\]</span></p>
+<p><span class="math display">\[cov_{(FS)} = cov_{O\bar{P}} + d^2p^2q^ =  \frac{1}{2}V_A + \frac{1}{4}V_D\]</span></p>
+<p>The correlation of full sibs is:</p>
+<p><span class="math display">\[t = \frac{\frac{1}{2}V_A + \frac{1}{4}V_D}{V_P}\]</span></p>
+<p>In principle the difference between the covariances of full sibs and of half sibs provides a way of estimating the domiance variance, since <span class="math inline">\(cov_{(FS)}-2cov_{(HS)} = \frac{1}{4}V_D\)</span>. In practice, however, this can be done only if there is no environmental contributions to the phenotypic covariances.</p>
 </div>
 <div id="twins" class="section level3">
 <h3><span class="header-section-number">10.1.5</span> Twins</h3>
+<p>For dizygotic (fraternal) twins are related as full sibs and their genetic covariance is that of full sibs.</p>
+<p>For monozygotic (identical) twins have identical genotypes, so there is no genetic variance within pairs and the whole of the genetic vaiance appears in the between-pair component. The genetic covariance is therefore</p>
+<p><span class="math display">\[cov_{(MZ)} = V_G\]</span></p>
 </div>
 <div id="general" class="section level3">
 <h3><span class="header-section-number">10.1.6</span> General</h3>
+<p>The generalized covariance for any sort of relationship is</p>
+<p><span class="math display">\[cov = rV_A + uV_D\]</span></p>
+<p>The coefficient r of the additive varaince is sometimes called the <strong>coefficient of relationship</strong>, or the <strong>theoretical correlation</strong>.</p>
 <p>Table 9.3 Coefficients of the variance components in the covariances of relative.</p>
 <table>
 <thead>
