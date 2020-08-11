@@ -1,0 +1,35 @@
+# Quantitative trait loci
+
+## Major genes
+
+### Methods of detecton
+
+## Methods for mapping QTLs
+
+### Marker loci
+
+### QTL genotypes
+
+### Single marker analysis
+
+### Interval mapping analysis
+
+## Genetical and statistical considerations
+
+### Experimental design
+
+### Multiple test
+
+### Maximum likelihood estimation
+
+### Multiple QTLs
+
+## Experimental results
+
+### Number of loci
+
+### Gene effects
+
+### Consistency
+
+## From QTL to gene

@@ -1,0 +1,19 @@
+# Correlated characters
+
+## Genetic and environmental correlations
+
+### Estimation of the genetic correlation
+
+## Correlated response to selection
+
+### Indirect selection
+
+## Genotype-environment interaction
+
+## Index selection
+
+### Construction of the index
+
+### Response
+
+### Effect of selection on genetic correlations

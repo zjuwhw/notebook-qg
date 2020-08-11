@@ -1,0 +1,39 @@
+# Metric characters under natural selction
+
+## Natural selection
+
+### Fitness and its components
+
+## Relationships between metric characters and fitness
+
+### Fitness profiles
+
+## Responses to natural selection
+
+### Fitness
+
+### Correlated responses
+
+### Strength of selection
+
+## Equilibrium populations
+
+### Fitness
+
+### Major components
+
+### Characters with intermediate optima
+
+### Characters with minimum fitness of intermediates
+
+### Neutral characters
+
+## Origin of variation by mutation
+
+### Mutational variance
+
+## Maintenance of genetic variation
+
+### Balance between neutral mutation and random drift
+
+### Mutation-selection balance

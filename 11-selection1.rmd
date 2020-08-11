@@ -1,0 +1,23 @@
+# Selection: 1. The response and its prediction
+
+## Response to selection
+
+### Prediction of response
+
+### Selection differential and intensity of selection
+
+### Improvement of response
+
+## Measurenment of response
+
+### Variability of generation means
+
+### Weighting the selection differential
+
+### Realized heritability
+
+### Maternal effects
+
+## Change of gene frequency under artificial selection
+
+## Effects of selection on variance

@@ -1,0 +1,19 @@
+# Selection: II The results of experiments
+
+## Short-term results
+
+### Repeatability of response
+
+### Sampling variance
+
+### Asymmetry of response
+
+## Long-term results
+
+### Selection limits
+
+### Mutation
+
+### Causes of selection limits
+
+### Number of loci (effective factors) and standardized effects

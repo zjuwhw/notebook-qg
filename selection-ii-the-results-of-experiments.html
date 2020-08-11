@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="continuous-variation.html"/>
-<link rel="next" href="variance.html"/>
+<link rel="prev" href="selection-1-the-response-and-its-prediction.html"/>
+<link rel="next" href="selection-iii-information-from-relatives.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -416,326 +416,35 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="values-and-means" class="section level1">
-<h1><span class="header-section-number">8</span> Values and Means</h1>
-<p>The concept of <strong>value</strong> is expressible in the metric units by which the character is measured. The value observed when the character is measured on an individual is the <strong>phenotypic value</strong> of that individual. All observations, whether of means, variances, or covariances, must clearly be based on measurements of phenotypic values.</p>
-<p>The first division of phenotypic value is into components attributable to the influence of genotype and environment. The <strong>genotype</strong> is the particular assemblage of genes possessed by the individual, and the <strong>environment</strong> is all the non-genetic circumstances that influence the phenotypic value.</p>
-<p><span class="math display">\[P = G + E\]</span></p>
-<p>where P is the phenotypic value, G is the genotypic value, and E is the environmental deviation.</p>
-<p>The mean environmental deviation in the population as a whole is taken to be zero, so that the mean phenotypic value is equal to the mean genotypic value. The term <strong>population mean</strong> then refers equally to phenotypic or to genotypic values.</p>
-<p>For the purposes of deduction we must assign arbitrary values to the genotypes under discussion. Considering a single locus with two alleles, <span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span>, we cal the genotypic value of one homozygote +a, that of the other homozygote -a and that of the heterozygote d. (we shall adopt the convention that <span class="math inline">\(A_1\)</span> is the allele that increases the value).</p>
-<div class="figure">
-<img src="_main_files/figure-html/genotypic_value.png" />
+<div id="selection-ii-the-results-of-experiments" class="section level1">
+<h1><span class="header-section-number">13</span> Selection: II The results of experiments</h1>
+<div id="short-term-results" class="section level2">
+<h2><span class="header-section-number">13.1</span> Short-term results</h2>
+<div id="repeatability-of-response" class="section level3">
+<h3><span class="header-section-number">13.1.1</span> Repeatability of response</h3>
+</div>
+<div id="sampling-variance" class="section level3">
+<h3><span class="header-section-number">13.1.2</span> Sampling variance</h3>
+</div>
+<div id="asymmetry-of-response" class="section level3">
+<h3><span class="header-section-number">13.1.3</span> Asymmetry of response</h3>
+</div>
+</div>
+<div id="long-term-results" class="section level2">
+<h2><span class="header-section-number">13.2</span> Long-term results</h2>
+<div id="selection-limits" class="section level3">
+<h3><span class="header-section-number">13.2.1</span> Selection limits</h3>
+</div>
+<div id="mutation" class="section level3">
+<h3><span class="header-section-number">13.2.2</span> Mutation</h3>
+</div>
+<div id="causes-of-selection-limits" class="section level3">
+<h3><span class="header-section-number">13.2.3</span> Causes of selection limits</h3>
+</div>
+<div id="number-of-loci-effective-factors-and-standardized-effects" class="section level3">
+<h3><span class="header-section-number">13.2.4</span> Number of loci (effective factors) and standardized effects</h3>
 
 </div>
-<p>Fig. 7.1. Arbitrarily assigned genotypic values</p>
-<div id="population-mean" class="section level2">
-<h2><span class="header-section-number">8.1</span> Population mean</h2>
-<p>Table 7.1</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Genotype</th>
-<th align="left">Frequency</th>
-<th align="left">Value</th>
-<th align="left">Freq. * Val.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_1A_1\)</span></td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left">+a</td>
-<td align="left"><span class="math inline">\(p^2a\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(A_1A_2\)</span></td>
-<td align="left">2pq</td>
-<td align="left">d</td>
-<td align="left">2pqd</td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_2A_2\)</span></td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-<td align="left">-a</td>
-<td align="left">-q^2a</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">Sum =</td>
-<td align="left">a(p-q)+2pqd</td>
-</tr>
-</tbody>
-</table>
-<p>The population mean is thus</p>
-<p><span class="math display">\[M = a(p-q)+2dpq\]</span></p>
-<p>This is both the mean genotypic value and the mean phenotypic value of the population with respect to the character. The contribution of any locus to the population mean thus has two terms: a(p-q) attributable to homozygotes, and 2dpq attributable to heterozygotes. If there is no dominance (d=0), M = a(1-2q); if ther is complete domiance (d=a), <span class="math inline">\(M = a(1-2q^2)\)</span>. The total range of value attributable to the locus is 2a, in the abseence of overdomiance. (M=-a when q=1; M=a when q=0)</p>
-<p>We suppose that the combination of genes at several loci is by addition. Then the population mean:</p>
-<p><span class="math display">\[M = \sum a(p-q) + 2\sum dpq\]</span></p>
-</div>
-<div id="average-effect" class="section level2">
-<h2><span class="header-section-number">8.2</span> Average effect</h2>
-<p>The value associated with genes(alleles) as distinct from genotypes is known as the <strong>average effect</strong>.</p>
-<p>There are several ways in which average effects can be defined. One defination is this: the average effect of a particular gene (allele) is the mean deviation from the population mean of individuals which received that gene (allele) from one parent, the gene (allele) from the other parent havving come at random from the population.</p>
-<p>Table 7.2</p>
-<table style="width:47%;">
-<colgroup>
-<col width="5%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Type of gamete</th>
-<th align="center">genotype <span class="math inline">\(A_1A_1\)</span> (a)</th>
-<th align="center">genotype <span class="math inline">\(A_1A_2\)</span> (d)</th>
-<th align="center">genotype <span class="math inline">\(A_2A_2\)</span> (-a)</th>
-<th align="center">Mean value of genotypes produced</th>
-<th align="center">Population mean to be deducted</th>
-<th align="center">Average effect of gene(allele)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_1\)</span></td>
-<td align="center">p</td>
-<td align="center">q</td>
-<td align="center"></td>
-<td align="center">pa+qd</td>
-<td align="center">a(p-q)+2dpq</td>
-<td align="center">q(a+d(q-p))</td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(A_2\)</span></td>
-<td align="center"></td>
-<td align="center">p</td>
-<td align="center">q</td>
-<td align="center">-qa+pd</td>
-<td align="center">-</td>
-<td align="center">-p(a+d(q-p))</td>
-</tr>
-</tbody>
-</table>
-<p>The gametes carring <span class="math inline">\(A_1\)</span> unite at random with gametes from the population, the frequencies of the genotypes will be p of <span class="math inline">\(A_1A_1\)</span> and q of <span class="math inline">\(A_1A_2\)</span>. The genotypic value of <span class="math inline">\(A_1A_1\)</span> is +a and that of <span class="math inline">\(A_1A_2\)</span> is d, the mean is pa+qd. The difference between this mean and the population mean is the average effect of the gene (allele) <span class="math inline">\(A_1\)</span>, which we use the symbol <span class="math inline">\(\alpha_1\)</span>:</p>
-<p><span class="math display">\[\alpha_1 = pa+qd-(a(p-q)+2dpq) = q(a+d(q-p))\]</span></p>
-<p>Similarly, the average effect of the gene <span class="math inline">\(A_2\)</span> is</p>
-<p><span class="math display">\[\alpha_2 = -p(a+d(q-p))\]</span></p>
-<p>The <strong>average effect of the gene substitution (allele substitution)</strong> is simple the difference between the average effects of two alleles:</p>
-<p><span class="math display">\[\alpha = \alpha_1 - \alpha_2 = a + d(q-p)\]</span></p>
-<p>And then the average effects of the two alleles, when expressed in terms of the average effect of the gene substitution, are</p>
-<p><span class="math display">\[\alpha_1 = q\alpha\]</span></p>
-<p><span class="math display">\[\alpha_2 = -p \alpha\]</span></p>
-</div>
-<div id="breeding-value" class="section level2">
-<h2><span class="header-section-number">8.3</span> Breeding value</h2>
-<p>The value of an individual, judged by the mean value of its progeny, is called the <strong>breeding value</strong> of the individual.</p>
-<p>For a single locus with two alleles, the breeding values of the genotypes are as follows:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Genotype</th>
-<th align="left">Breeding value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_1A_1\)</span></td>
-<td align="left"><span class="math inline">\(2\alpha_1 = 2q\alpha\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(A_1A_2\)</span></td>
-<td align="left"><span class="math inline">\(\alpha_1 + \alpha_2 = (q-p)\alpha\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_2A_2\)</span></td>
-<td align="left"><span class="math inline">\(2\alpha_2 = -2p\alpha\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Consideration of the definition of breeding value will show that in a population in HWE the mean breeding value must be zero.</p>
-<p><span class="math display">\[2q\alpha \times p^2 + (q-p)\alpha \times 2pq -2p\alpha \times q^2 = 2pq\alpha(p+q-p-q)=0\]</span></p>
-</div>
-<div id="dominance-deviation" class="section level2">
-<h2><span class="header-section-number">8.4</span> Dominance deviation</h2>
-<p>For a single locus, the difference between the genotypic value G and the breeding value of A of a particular genotype is known as the dominance deviation D, so that</p>
-<p><span class="math display">\[G = A + D\]</span></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## initial the value
-a =<span class="st"> </span><span class="dv">1</span>
-d=<span class="dv">3</span><span class="op">/</span><span class="dv">4</span>
-q=<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>
-## calculate other values
-p=<span class="dv">1</span><span class="op">-</span>q
-population_mean =<span class="st"> </span>a<span class="op">*</span>(p<span class="op">-</span>q) <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>d<span class="op">*</span>p<span class="op">*</span>q  ### population mean
-alpha =<span class="st"> </span>a <span class="op">+</span><span class="st"> </span>d<span class="op">*</span>(q<span class="op">-</span>p)                  ### the average effect of an allelic substitution
-alpha1 =<span class="st"> </span>q<span class="op">*</span>alpha                     ### average effect of A1 allele
-alpha2 =<span class="st"> </span><span class="op">-</span>p<span class="op">*</span>alpha                    ### average effect of A2 allele
-## vectors
-genotype =<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>)                  ### genotype coded by the number of allele A1
-genotype_value =<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span>a,d,a)           ### gennotypic values
-genotype_frq =<span class="st"> </span><span class="kw">c</span>(q<span class="op">^</span><span class="dv">2</span>, <span class="dv">2</span><span class="op">*</span>p<span class="op">*</span>q, p<span class="op">^</span><span class="dv">2</span>)    ### genotype frequence
-breeding_value =<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>p<span class="op">*</span>alpha,(q<span class="op">-</span>p)<span class="op">*</span>alpha, <span class="dv">2</span><span class="op">*</span>q<span class="op">*</span>alpha)      ### breeding values for each genotype group
-## plot - basic frame
-<span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>) <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span>)
-<span class="kw">plot</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">2</span>),<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>,<span class="fl">1.2</span>),<span class="dt">col=</span><span class="st">&quot;white&quot;</span>,<span class="dt">xaxt=</span><span class="st">&quot;n&quot;</span>,<span class="dt">yaxt=</span><span class="st">&quot;n&quot;</span>,<span class="dt">xlab=</span><span class="st">&quot;Frequency&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;Genotypic values&quot;</span>)
-<span class="kw">mtext</span>(<span class="st">&quot;Breeding values&quot;</span>, <span class="dt">side =</span> <span class="dv">4</span>, <span class="dt">line =</span> <span class="dv">3</span>, <span class="dt">cex =</span> <span class="kw">par</span>(<span class="st">&quot;cex.lab&quot;</span>))
-<span class="kw">axis</span>(<span class="dt">side=</span><span class="dv">2</span>, <span class="dt">at=</span><span class="kw">c</span>(genotype_value,<span class="dv">0</span>), <span class="dt">labels=</span> <span class="kw">c</span>(<span class="st">&quot;-a&quot;</span>,<span class="st">&quot;d&quot;</span>,<span class="st">&quot;+a&quot;</span>,<span class="st">&quot;0&quot;</span>),<span class="dt">las=</span><span class="dv">1</span>)
-<span class="kw">axis</span>(<span class="dt">side=</span><span class="dv">1</span>, <span class="dt">at=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>),<span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;A2A2(0)&quot;</span>,<span class="st">&quot;A1A2(1)&quot;</span>,<span class="st">&quot;A1A1(2)&quot;</span>))
-<span class="kw">axis</span>(<span class="dt">side =</span> <span class="dv">4</span>, <span class="dt">at=</span><span class="kw">c</span>(breeding_value,<span class="dv">0</span>)<span class="op">+</span>population_mean, <span class="dt">labels=</span> <span class="kw">c</span>(<span class="st">&quot;-2pα&quot;</span>,<span class="st">&quot;(q-p)α&quot;</span>,<span class="st">&quot;2qα&quot;</span>,<span class="st">&quot;0&quot;</span>),<span class="dt">las=</span><span class="dv">1</span>)   ### Breeding value is deviations from the population mean.
-## plot - genotypic values
-<span class="kw">points</span>(genotype, genotype_value,<span class="dt">pch=</span><span class="dv">16</span>)
-## plot - the regression line, Fisher&#39;s decomposition
-y =<span class="st"> </span><span class="kw">rep</span>(genotype_value,genotype_frq<span class="op">*</span><span class="dv">16</span>)
-x =<span class="st"> </span><span class="kw">rep</span>(genotype, genotype_frq<span class="op">*</span><span class="dv">16</span>)
-lmfit =<span class="st"> </span><span class="kw">lm</span>(y<span class="op">~</span>x)
-b0 =<span class="st"> </span>lmfit<span class="op">$</span><span class="st">&quot;coeff&quot;</span>[<span class="dv">1</span>]
-b1 =<span class="st"> </span>lmfit<span class="op">$</span><span class="st">&quot;coeff&quot;</span>[<span class="dv">2</span>]
-<span class="kw">abline</span>(b0,b1)
-## plot - some indicating lines, points
-<span class="kw">points</span>(<span class="dv">0</span>,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2)
-<span class="kw">points</span>(<span class="dv">1</span>,population_mean<span class="op">+</span>alpha1<span class="op">+</span>alpha2)
-<span class="kw">points</span>(<span class="dv">2</span>,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha1)
-<span class="kw">lines</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="kw">c</span>(population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2),<span class="dt">lty=</span><span class="dv">2</span>)
-<span class="kw">lines</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2,population_mean<span class="op">+</span>alpha1<span class="op">+</span>alpha2),<span class="dt">lty=</span><span class="dv">2</span>)
-<span class="kw">text</span>(<span class="fl">0.5</span>,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2<span class="op">+</span><span class="fl">0.1</span>,<span class="st">&quot;1&quot;</span>)
-<span class="kw">text</span>(<span class="fl">1.05</span>,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2<span class="op">+</span><span class="fl">0.3</span>,<span class="st">&quot;α&quot;</span>)
-<span class="kw">lines</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),<span class="kw">c</span>(<span class="op">-</span>a,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha2),<span class="dt">lty=</span><span class="dv">3</span>)
-<span class="kw">lines</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(population_mean<span class="op">+</span>alpha2<span class="op">+</span>alpha1,d),<span class="dt">lty=</span><span class="dv">3</span>)
-<span class="kw">lines</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>),<span class="kw">c</span>(a,population_mean<span class="op">+</span><span class="dv">2</span><span class="op">*</span>alpha1),<span class="dt">lty=</span><span class="dv">3</span>)
-<span class="kw">points</span>((population_mean<span class="op">-</span>b0)<span class="op">/</span>b1,population_mean, <span class="dt">pch=</span><span class="dv">3</span>)  ### population mean</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>In the figure,</p>
-<ul>
-<li>The genotypic values (closed circles) are plotted against the number of <span class="math inline">\(A_1\)</span> genes in the genotype</li>
-<li>A straight regression line is fitted by least squares to these points, each point being weighted by the frequency of the genotype it represents.</li>
-<li>The position of this line gives the breeding values of each genotype, as shown by the open circles.</li>
-<li>The differences between the breeding values and the genotypic values are the dominance deviations (D), indicated by vertical dotted lines.</li>
-<li>The cross marks the population mean.</li>
-<li>The average effect <span class="math inline">\(\alpha\)</span> of the gene substitution is given by the difference in breeding value between <span class="math inline">\(A_2A_2\)</span> and <span class="math inline">\(A_1A_2\)</span>, or between <span class="math inline">\(A_1A_2\)</span> and <span class="math inline">\(A_1A_1\)</span> as indicated.</li>
-</ul>
-<p>Note: Bruce Walsh's <a href="http://cnsgenomics.com/teaching/SISG/module_1/Module01-Lecture-Notes.pdf">slides</a> are good supplement resouces.</p>
-<p>Table 7.3 Values of genotypes in a two-allele system, measured as deviations from the population mean.</p>
-<ul>
-<li>Population mean: M = a(p-q)+2dpq</li>
-<li>Average effect of gene substitution: <span class="math inline">\(\alpha\)</span> = a+d(q-p)</li>
-</ul>
-<table style="width:22%;">
-<colgroup>
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Genotype</th>
-<th align="left"><span class="math inline">\(A_1A_1\)</span></th>
-<th align="left"><span class="math inline">\(A_1A_2\)</span></th>
-<th align="left"><span class="math inline">\(A_2A_2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Frequencies</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Assigned values</td>
-<td align="left">a</td>
-<td align="left">d</td>
-<td align="left">-a</td>
-</tr>
-<tr class="odd">
-<td align="left">Genotypic value<span class="math inline">\(^a\)</span></td>
-<td align="left"><span class="math inline">\(2q(a-pd)\)</span></td>
-<td align="left"><span class="math inline">\(a(q-p)+d(1-2pq)\)</span></td>
-<td align="left"><span class="math inline">\(-2p(a+qd)\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Genotypic value<span class="math inline">\(^b\)</span></td>
-<td align="left"><span class="math inline">\(2q(\alpha-qd)\)</span></td>
-<td align="left"><span class="math inline">\((q-p)\alpha+2pqd\)</span></td>
-<td align="left"><span class="math inline">\(-2p(\alpha+pd)\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left">Breeding value</td>
-<td align="left"><span class="math inline">\(2q\alpha = 2\alpha_1\)</span></td>
-<td align="left"><span class="math inline">\((q-p)\alpha=\alpha_1+\alpha_2\)</span></td>
-<td align="left"><span class="math inline">\(-2p\alpha=2\alpha_2\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Domiance deviation</td>
-<td align="left"><span class="math inline">\(-2q^2d\)</span></td>
-<td align="left"><span class="math inline">\(2pqd\)</span></td>
-<td align="left"><span class="math inline">\(-2p^2d\)</span></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><ol style="list-style-type: lower-alpha">
-<li>The genotypic value is deviations from population mean and in terms of a</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: lower-alpha">
-<li>The genotypic value is deviations from population mean and in terms of <span class="math inline">\(\alpha\)</span></li>
-</ol></li>
-</ul>
-<p>From the table above, if there is no domiance, d is zero and the domiance deviations are also zero. Therefore in the absence of dominance, breeding values and genotypic values are the same. Genes that show no domiance (d=0) are sometimes called &quot;additive genes&quot;, or are said to &quot;act additively&quot;.</p>
-</div>
-<div id="interaction-deviation" class="section level2">
-<h2><span class="header-section-number">8.5</span> Interaction deviation</h2>
-<p>When the genotype refers to more than one locus, the genotypic value may contain an additional deviation due to non-additive combination. Let <span class="math inline">\(G_A\)</span> be the genotypic value of an individual attributable to one locus, <span class="math inline">\(G_B\)</span> that attributable to a second locus, and G the aggregate genotypic value attributable to both loci together. Then</p>
-<p><span class="math display">\[G = G_A + G_B + I_{AB}\]</span></p>
-<p>where <span class="math inline">\(I_{AB}\)</span> is the deviation from additive combination of these genotypic values.</p>
-<p>If I is not zero for any combination of genes at different loci, those genes are said to &quot;interact&quot; or to exhibit &quot;epistasis&quot;, the term epistasis being given a wider meaning in quantitative genetics than in Mendelian genetics. The deviation I is called the interaction deviation or epistatic deviation.</p>
-<p>For all loci together we can write,</p>
-<p><span class="math display">\[G = A + D +I\]</span></p>
-<p>where A is the sum of the breeding values attributable to the separate loci, and D is the sum of the dominance deviations.</p>
-</div>
-<div id="note-proof-of-the-slope-of-regression-line" class="section level2">
-<h2><span class="header-section-number">8.6</span> Note: Proof of the slope of regression line</h2>
-<table>
-<thead>
-<tr class="header">
-<th align="left">genotype</th>
-<th align="left">allele A1 number(x)</th>
-<th align="left">genotypic value(y)</th>
-<th align="left">frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_1A_1\)</span></td>
-<td align="left">2</td>
-<td align="left">+a</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(A_1A_2\)</span></td>
-<td align="left">1</td>
-<td align="left">d</td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_2A_2\)</span></td>
-<td align="left">0</td>
-<td align="left">-a</td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(E(x) = 2p^2 + 1 \times 2pq + 0 \times q^2 = 2p\)</span></p>
-<p><span class="math inline">\(Var(x) = 2pq\)</span></p>
-<p><span class="math inline">\(E(y) = a \times p^2 + d\times 2pq + (-a)\times q^2 = a(p-q)+2dpq \text{ (Population mean)}\)</span></p>
-<p><span class="math inline">\(E(xy) = 2 \times a \times p^2 + 1 \times d \times 2pq + 0 \times (-a) \times q^2 = 2pqd + 2ap^2\)</span></p>
-<p><span class="math inline">\(Cov(y,x)= E(xy) - E(x)E(y) = 2pqd+2ap^2-2p\times (a(p-q)+2dpq) = 2pq(d(q-p)+a)\)</span></p>
-<p><span class="math inline">\(b_1 = \frac{Cov(y,x)}{Var(x)} = d(q-p)+a = \alpha\)</span></p>
-
 </div>
 </div>
             </section>
@@ -743,8 +452,8 @@ b1 =<span class="st"> </span>lmfit<span class="op">$</span><span class="st">&quo
           </div>
         </div>
       </div>
-<a href="continuous-variation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="variance.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="selection-1-the-response-and-its-prediction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="selection-iii-information-from-relatives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
